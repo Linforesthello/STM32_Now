@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"usart_trans_it\startup_stm32f103xb.o"
+"usart_trans_it\main.o"
+"usart_trans_it\gpio.o"
+"usart_trans_it\tim.o"
+"usart_trans_it\usart.o"
+"usart_trans_it\stm32f1xx_it.o"
+"usart_trans_it\stm32f1xx_hal_msp.o"
+"usart_trans_it\stm32f1xx_hal_gpio_ex.o"
+"usart_trans_it\stm32f1xx_hal_tim.o"
+"usart_trans_it\stm32f1xx_hal_tim_ex.o"
+"usart_trans_it\stm32f1xx_hal.o"
+"usart_trans_it\stm32f1xx_hal_rcc.o"
+"usart_trans_it\stm32f1xx_hal_rcc_ex.o"
+"usart_trans_it\stm32f1xx_hal_gpio.o"
+"usart_trans_it\stm32f1xx_hal_dma.o"
+"usart_trans_it\stm32f1xx_hal_cortex.o"
+"usart_trans_it\stm32f1xx_hal_pwr.o"
+"usart_trans_it\stm32f1xx_hal_flash.o"
+"usart_trans_it\stm32f1xx_hal_flash_ex.o"
+"usart_trans_it\stm32f1xx_hal_exti.o"
+"usart_trans_it\stm32f1xx_hal_uart.o"
+"usart_trans_it\system_stm32f1xx.o"
+--strict --scatter "USART_TRANS_IT\USART_TRANS_IT.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "USART_TRANS_IT.map" -o USART_TRANS_IT\USART_TRANS_IT.axf

@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"usart_example\startup_stm32f103xb.o"
+"usart_example\main.o"
+"usart_example\gpio.o"
+"usart_example\usart.o"
+"usart_example\stm32f1xx_it.o"
+"usart_example\stm32f1xx_hal_msp.o"
+"usart_example\stm32f1xx_hal_gpio_ex.o"
+"usart_example\stm32f1xx_hal_uart.o"
+"usart_example\stm32f1xx_hal.o"
+"usart_example\stm32f1xx_hal_rcc.o"
+"usart_example\stm32f1xx_hal_rcc_ex.o"
+"usart_example\stm32f1xx_hal_gpio.o"
+"usart_example\stm32f1xx_hal_dma.o"
+"usart_example\stm32f1xx_hal_cortex.o"
+"usart_example\stm32f1xx_hal_pwr.o"
+"usart_example\stm32f1xx_hal_flash.o"
+"usart_example\stm32f1xx_hal_flash_ex.o"
+"usart_example\stm32f1xx_hal_exti.o"
+"usart_example\system_stm32f1xx.o"
+--strict --scatter "USART_Example\USART_Example.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "USART_Example.map" -o USART_Example\USART_Example.axf

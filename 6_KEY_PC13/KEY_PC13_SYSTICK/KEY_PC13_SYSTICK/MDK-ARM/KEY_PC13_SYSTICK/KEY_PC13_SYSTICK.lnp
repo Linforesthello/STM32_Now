@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"key_pc13_systick\startup_stm32f103xb.o"
+"key_pc13_systick\main.o"
+"key_pc13_systick\gpio.o"
+"key_pc13_systick\stm32f1xx_it.o"
+"key_pc13_systick\stm32f1xx_hal_msp.o"
+"key_pc13_systick\stm32f1xx_hal_gpio_ex.o"
+"key_pc13_systick\stm32f1xx_hal.o"
+"key_pc13_systick\stm32f1xx_hal_rcc.o"
+"key_pc13_systick\stm32f1xx_hal_rcc_ex.o"
+"key_pc13_systick\stm32f1xx_hal_gpio.o"
+"key_pc13_systick\stm32f1xx_hal_dma.o"
+"key_pc13_systick\stm32f1xx_hal_cortex.o"
+"key_pc13_systick\stm32f1xx_hal_pwr.o"
+"key_pc13_systick\stm32f1xx_hal_flash.o"
+"key_pc13_systick\stm32f1xx_hal_flash_ex.o"
+"key_pc13_systick\stm32f1xx_hal_exti.o"
+"key_pc13_systick\system_stm32f1xx.o"
+--strict --scatter "KEY_PC13_SYSTICK\KEY_PC13_SYSTICK.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "KEY_PC13_SYSTICK.map" -o KEY_PC13_SYSTICK\KEY_PC13_SYSTICK.axf

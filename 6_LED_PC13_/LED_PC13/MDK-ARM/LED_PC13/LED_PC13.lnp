@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"led_pc13\startup_stm32f103xb.o"
+"led_pc13\main.o"
+"led_pc13\gpio.o"
+"led_pc13\stm32f1xx_it.o"
+"led_pc13\stm32f1xx_hal_msp.o"
+"led_pc13\stm32f1xx_hal_gpio_ex.o"
+"led_pc13\stm32f1xx_hal.o"
+"led_pc13\stm32f1xx_hal_rcc.o"
+"led_pc13\stm32f1xx_hal_rcc_ex.o"
+"led_pc13\stm32f1xx_hal_gpio.o"
+"led_pc13\stm32f1xx_hal_dma.o"
+"led_pc13\stm32f1xx_hal_cortex.o"
+"led_pc13\stm32f1xx_hal_pwr.o"
+"led_pc13\stm32f1xx_hal_flash.o"
+"led_pc13\stm32f1xx_hal_flash_ex.o"
+"led_pc13\stm32f1xx_hal_exti.o"
+"led_pc13\system_stm32f1xx.o"
+--strict --scatter "LED_PC13\LED_PC13.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LED_PC13.map" -o LED_PC13\LED_PC13.axf

@@ -1,29 +1,40 @@
-# Keil build output
-*.axf
-*.htm
-*.lnp
-*.lst
-*.map
-*.o
-*.sct
-*.tra
-*.d
-*.crf
+#---------------------------------------------------
+# 1. MDK-Keil Compiler Build Output (Output Files)
+# These are generated during the build process
+#---------------------------------------------------
+*.axf         # Executable/Debug file
+*.htm         # Build log/error/info
+*.lnp         # Linker control file
+*.lst         # Listing files
+*.map         # Memory map file
+*.o           # Object files (intermediate)
+*.sct         # Scatter file (linker script)
+*.tra         # Target setting file
+*.d           # Dependency files
+*.crf         # Cross-reference file
 *.build_log.htm
 *.dep
 *.iex
 
-# Keil specific user settings
-*.uvoptx
-*.uvgui*
-*.uvguix.*
-*.bak
+#---------------------------------------------------
+# 2. MDK-Keil Project Configuration & User Settings
+# These store user preferences, window layouts, etc.
+#---------------------------------------------------
+*.uvoptx      # Project options file
+*.uvgui* # GUI layout file (old format)
+*.uvguix.* # GUI layout file (new format)
+*.bak         # Generic backup files (may include Keil/CubeMX)
 
-# CubeMX generated backup files
-*.bak
-*.ioc-backup*
+#---------------------------------------------------
+# 3. STM32CubeMX Specific
+#---------------------------------------------------
+*.ioc-backup* # CubeMX project backup files
+# Note: CubeMX project file (.ioc) itself should generally NOT be ignored.
 
-# Build folders
+#---------------------------------------------------
+# 4. Common Build Output Directories
+# These directories contain all generated output files
+#---------------------------------------------------
 /Objects/
 /Listings/
 /Output/
@@ -31,6 +42,8 @@
 /Debug/
 /Release/
 
-# VSCode specific
-.vscode/
-*.code-workspace
+#---------------------------------------------------
+# 5. IDE/Editor Specific Files (VSCode/Generic)
+#---------------------------------------------------
+.vscode/            # VSCode settings folder
+*.code-workspace    # VSCode workspace file

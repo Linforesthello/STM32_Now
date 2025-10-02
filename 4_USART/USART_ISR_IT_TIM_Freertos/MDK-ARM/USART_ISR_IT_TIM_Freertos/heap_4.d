@@ -1,0 +1,13 @@
+usart_isr_it_tim_freertos\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+usart_isr_it_tim_freertos\heap_4.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
+usart_isr_it_tim_freertos\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+usart_isr_it_tim_freertos\heap_4.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
+usart_isr_it_tim_freertos\heap_4.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+usart_isr_it_tim_freertos\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
+usart_isr_it_tim_freertos\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+usart_isr_it_tim_freertos\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+usart_isr_it_tim_freertos\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+usart_isr_it_tim_freertos\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+usart_isr_it_tim_freertos\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+usart_isr_it_tim_freertos\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+usart_isr_it_tim_freertos\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

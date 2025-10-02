@@ -1,0 +1,14 @@
+led_pc13freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+led_pc13freertos\stream_buffer.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+led_pc13freertos\stream_buffer.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
+led_pc13freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+led_pc13freertos\stream_buffer.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
+led_pc13freertos\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
+led_pc13freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+led_pc13freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+led_pc13freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+led_pc13freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+led_pc13freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+led_pc13freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+led_pc13freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+led_pc13freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h

@@ -1,0 +1,14 @@
+key_pc13_freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+key_pc13_freertos\stream_buffer.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+key_pc13_freertos\stream_buffer.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
+key_pc13_freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+key_pc13_freertos\stream_buffer.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
+key_pc13_freertos\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
+key_pc13_freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+key_pc13_freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+key_pc13_freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+key_pc13_freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+key_pc13_freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+key_pc13_freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+key_pc13_freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+key_pc13_freertos\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h
