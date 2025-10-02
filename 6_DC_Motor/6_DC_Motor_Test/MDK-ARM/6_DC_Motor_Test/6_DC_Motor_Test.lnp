@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"6_dc_motor_test\startup_stm32f103xb.o"
+"6_dc_motor_test\main.o"
+"6_dc_motor_test\gpio.o"
+"6_dc_motor_test\tim.o"
+"6_dc_motor_test\usart.o"
+"6_dc_motor_test\stm32f1xx_it.o"
+"6_dc_motor_test\stm32f1xx_hal_msp.o"
+"6_dc_motor_test\stm32f1xx_hal_gpio_ex.o"
+"6_dc_motor_test\stm32f1xx_hal_tim.o"
+"6_dc_motor_test\stm32f1xx_hal_tim_ex.o"
+"6_dc_motor_test\stm32f1xx_hal.o"
+"6_dc_motor_test\stm32f1xx_hal_rcc.o"
+"6_dc_motor_test\stm32f1xx_hal_rcc_ex.o"
+"6_dc_motor_test\stm32f1xx_hal_gpio.o"
+"6_dc_motor_test\stm32f1xx_hal_dma.o"
+"6_dc_motor_test\stm32f1xx_hal_cortex.o"
+"6_dc_motor_test\stm32f1xx_hal_pwr.o"
+"6_dc_motor_test\stm32f1xx_hal_flash.o"
+"6_dc_motor_test\stm32f1xx_hal_flash_ex.o"
+"6_dc_motor_test\stm32f1xx_hal_exti.o"
+"6_dc_motor_test\stm32f1xx_hal_uart.o"
+"6_dc_motor_test\system_stm32f1xx.o"
+--strict --scatter "6_DC_Motor_Test\6_DC_Motor_Test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "6_DC_Motor_Test.map" -o 6_DC_Motor_Test\6_DC_Motor_Test.axf

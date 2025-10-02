@@ -1,0 +1,1 @@
+6_dc_motor_test\startup_stm32f103xb.o: startup_stm32f103xb.s

@@ -1,0 +1,2 @@
+    int len = snprintf((char*)tx_buf, sizeof(tx_buf), "%lu\r\n", adc_value);
+    HAL_UART_Transmit(&huart1, tx_buf, len, HAL_MAX_DELAY);
