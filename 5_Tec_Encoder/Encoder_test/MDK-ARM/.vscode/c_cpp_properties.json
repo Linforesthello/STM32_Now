@@ -3,15 +3,15 @@
         {
             "name": "Encoder_test",
             "includePath": [
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\5_Tec_Encoder\\Encoder_test\\Core\\Inc",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\5_Tec_Encoder\\Encoder_test\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\5_Tec_Encoder\\Encoder_test\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\5_Tec_Encoder\\Encoder_test\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\5_Tec_Encoder\\Encoder_test\\Drivers\\CMSIS\\Include",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_Encoder\\Encoder_test\\Core\\Inc",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_Encoder\\Encoder_test\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_Encoder\\Encoder_test\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_Encoder\\Encoder_test\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_Encoder\\Encoder_test\\Drivers\\CMSIS\\Include",
                 "C:\\keil5\\MDK-ARM\\ARM\\ARMCC\\include",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\5_Tec_Encoder\\Encoder_test\\MDK-ARM",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\5_Tec_Encoder\\Encoder_test\\Core\\Src",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\5_Tec_Encoder\\Encoder_test\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_Encoder\\Encoder_test\\MDK-ARM",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_Encoder\\Encoder_test\\Core\\Src",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_Encoder\\Encoder_test\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

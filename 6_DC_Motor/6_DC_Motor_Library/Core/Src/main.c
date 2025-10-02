@@ -18,10 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+#include "motor.h"
 
 /* USER CODE END Includes */
 
@@ -44,6 +47,8 @@
 
 /* USER CODE BEGIN PV */
 
+Motor_t motor1;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -54,6 +59,29 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+void Motor_Test(void)
+{
+    // 正转 50%
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
+    Motor_SetSpeed(&motor1, 500);
+    HAL_Delay(2000);
+
+    // 停止
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
+    Motor_Stop(&motor1);
+    HAL_Delay(1000);
+
+    // 反转 80%
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
+    Motor_SetSpeed(&motor1, -800);
+    HAL_Delay(2000);
+
+    // 停止
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
+    Motor_Stop(&motor1);
+    HAL_Delay(1000);
+}
 
 /* USER CODE END 0 */
 
@@ -86,7 +114,16 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+
+    Motor_Init(&motor1, &htim3, TIM_CHANNEL_1,
+               GPIOB, GPIO_PIN_0, GPIOB, GPIO_PIN_1,
+               GPIOB, GPIO_PIN_10,
+               1000, 1000, 50,
+               0, MOTOR_STOP_BRAKE);
+
+  Motor_Test();  // 测试电机库函数
 
   /* USER CODE END 2 */
 
@@ -145,6 +182,8 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+
 
 /* USER CODE END 4 */
 
