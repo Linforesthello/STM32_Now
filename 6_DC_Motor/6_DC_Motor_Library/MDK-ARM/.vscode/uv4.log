@@ -1,2 +1,4 @@
-Load "6_DC_Motor_Library\\6_DC_Motor_Library.axf" 
-Erase Done.Programming Done.Verify OK.Flash Load finished at 20:23:31
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin'
+Build target '6_DC_Motor_Library'
+"6_DC_Motor_Library\6_DC_Motor_Library.axf" - 0 Error(s), 0 Warning(s).
+Build Time Elapsed:  00:00:00
