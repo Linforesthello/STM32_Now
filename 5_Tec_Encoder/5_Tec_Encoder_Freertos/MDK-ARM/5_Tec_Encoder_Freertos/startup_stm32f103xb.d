@@ -1,0 +1,1 @@
+5_tec_encoder_freertos\startup_stm32f103xb.o: startup_stm32f103xb.s

@@ -1,0 +1,16 @@
+5_tec_encoder_freertos\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+5_tec_encoder_freertos\tasks.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
+5_tec_encoder_freertos\tasks.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
+5_tec_encoder_freertos\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+5_tec_encoder_freertos\tasks.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
+5_tec_encoder_freertos\tasks.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+5_tec_encoder_freertos\tasks.o: ../Core/Inc/FreeRTOSConfig.h
+5_tec_encoder_freertos\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+5_tec_encoder_freertos\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+5_tec_encoder_freertos\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+5_tec_encoder_freertos\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+5_tec_encoder_freertos\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+5_tec_encoder_freertos\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+5_tec_encoder_freertos\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+5_tec_encoder_freertos\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+5_tec_encoder_freertos\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h
