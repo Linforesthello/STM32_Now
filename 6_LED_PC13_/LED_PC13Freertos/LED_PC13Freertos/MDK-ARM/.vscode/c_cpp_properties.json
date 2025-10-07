@@ -3,20 +3,20 @@
         {
             "name": "LED_PC13Freertos",
             "includePath": [
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Core\\Inc",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Middlewares\\Third_Party\\FreeRTOS\\Source\\include",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Middlewares\\Third_Party\\FreeRTOS\\Source\\CMSIS_RTOS_V2",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Middlewares\\Third_Party\\FreeRTOS\\Source\\portable\\RVDS\\ARM_CM3",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Drivers\\CMSIS\\Include",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Core\\Inc",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Middlewares\\Third_Party\\FreeRTOS\\Source\\include",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Middlewares\\Third_Party\\FreeRTOS\\Source\\CMSIS_RTOS_V2",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Middlewares\\Third_Party\\FreeRTOS\\Source\\portable\\RVDS\\ARM_CM3",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Drivers\\CMSIS\\Include",
                 "C:\\keil5\\MDK-ARM\\ARM\\ARMCC\\include",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\MDK-ARM",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Core\\Src",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Drivers\\STM32F1xx_HAL_Driver\\Src",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Middlewares\\Third_Party\\FreeRTOS\\Source",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Middlewares\\Third_Party\\FreeRTOS\\Source\\portable\\MemMang"
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\MDK-ARM",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Core\\Src",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Drivers\\STM32F1xx_HAL_Driver\\Src",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Middlewares\\Third_Party\\FreeRTOS\\Source",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_LED_PC13_\\LED_PC13Freertos\\LED_PC13Freertos\\Middlewares\\Third_Party\\FreeRTOS\\Source\\portable\\MemMang"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

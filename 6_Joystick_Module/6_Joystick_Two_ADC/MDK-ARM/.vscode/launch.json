@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceFolder}",
+            
+            // 1. 可执行文件路径
+            "executable": "C:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_Joystick_Module\\6_Joystick_Two_ADC\\MDK-ARM\\6_Joystick_TwoADC\\6_Joystick_TwoADC.axf",
+            
+            "name": "Debug with ST-Link (Final Attempt)",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            "servertype": "stlink",
+
+            // 2. GDB 路径
+            "gdbPath": "C:\\STM32_CubeCLT\\install\\STM32CubeCLT_1.19.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gdb.exe",
+            
+            // 3. GDB Server 路径
+            "serverpath": "C:\\STM32_CubeCLT\\install\\STM32CubeCLT_1.19.0\\STLink-gdb-server\\bin\\ST-LINK_gdbserver.exe",
+        }
+    ]
+}

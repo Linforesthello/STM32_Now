@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"5_tec_exti_pa2\startup_stm32f103xb.o"
+"5_tec_exti_pa2\main.o"
+"5_tec_exti_pa2\gpio.o"
+"5_tec_exti_pa2\adc.o"
+"5_tec_exti_pa2\usart.o"
+"5_tec_exti_pa2\stm32f1xx_it.o"
+"5_tec_exti_pa2\stm32f1xx_hal_msp.o"
+"5_tec_exti_pa2\stm32f1xx_hal_gpio_ex.o"
+"5_tec_exti_pa2\stm32f1xx_hal_adc.o"
+"5_tec_exti_pa2\stm32f1xx_hal_adc_ex.o"
+"5_tec_exti_pa2\stm32f1xx_hal.o"
+"5_tec_exti_pa2\stm32f1xx_hal_rcc.o"
+"5_tec_exti_pa2\stm32f1xx_hal_rcc_ex.o"
+"5_tec_exti_pa2\stm32f1xx_hal_gpio.o"
+"5_tec_exti_pa2\stm32f1xx_hal_dma.o"
+"5_tec_exti_pa2\stm32f1xx_hal_cortex.o"
+"5_tec_exti_pa2\stm32f1xx_hal_pwr.o"
+"5_tec_exti_pa2\stm32f1xx_hal_flash.o"
+"5_tec_exti_pa2\stm32f1xx_hal_flash_ex.o"
+"5_tec_exti_pa2\stm32f1xx_hal_exti.o"
+"5_tec_exti_pa2\stm32f1xx_hal_uart.o"
+"5_tec_exti_pa2\system_stm32f1xx.o"
+--strict --scatter "5_Tec_EXTI_PA2\5_Tec_EXTI_PA2.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "5_Tec_EXTI_PA2.map" -o 5_Tec_EXTI_PA2\5_Tec_EXTI_PA2.axf
