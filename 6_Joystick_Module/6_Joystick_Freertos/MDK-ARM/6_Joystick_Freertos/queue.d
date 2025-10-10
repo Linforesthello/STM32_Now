@@ -1,0 +1,15 @@
+6_joystick_freertos\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+6_joystick_freertos\queue.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
+6_joystick_freertos\queue.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
+6_joystick_freertos\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+6_joystick_freertos\queue.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
+6_joystick_freertos\queue.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+6_joystick_freertos\queue.o: ../Core/Inc/FreeRTOSConfig.h
+6_joystick_freertos\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+6_joystick_freertos\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+6_joystick_freertos\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+6_joystick_freertos\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+6_joystick_freertos\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+6_joystick_freertos\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+6_joystick_freertos\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+6_joystick_freertos\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

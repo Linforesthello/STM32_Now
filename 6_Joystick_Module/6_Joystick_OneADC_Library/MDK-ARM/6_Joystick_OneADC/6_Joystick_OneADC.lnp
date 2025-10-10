@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"6_joystick_oneadc\startup_stm32f103xb.o"
+"6_joystick_oneadc\main.o"
+"6_joystick_oneadc\gpio.o"
+"6_joystick_oneadc\adc.o"
+"6_joystick_oneadc\usart.o"
+"6_joystick_oneadc\stm32f1xx_it.o"
+"6_joystick_oneadc\stm32f1xx_hal_msp.o"
+"6_joystick_oneadc\stm32f1xx_hal_gpio_ex.o"
+"6_joystick_oneadc\stm32f1xx_hal_adc.o"
+"6_joystick_oneadc\stm32f1xx_hal_adc_ex.o"
+"6_joystick_oneadc\stm32f1xx_hal.o"
+"6_joystick_oneadc\stm32f1xx_hal_rcc.o"
+"6_joystick_oneadc\stm32f1xx_hal_rcc_ex.o"
+"6_joystick_oneadc\stm32f1xx_hal_gpio.o"
+"6_joystick_oneadc\stm32f1xx_hal_dma.o"
+"6_joystick_oneadc\stm32f1xx_hal_cortex.o"
+"6_joystick_oneadc\stm32f1xx_hal_pwr.o"
+"6_joystick_oneadc\stm32f1xx_hal_flash.o"
+"6_joystick_oneadc\stm32f1xx_hal_flash_ex.o"
+"6_joystick_oneadc\stm32f1xx_hal_exti.o"
+"6_joystick_oneadc\stm32f1xx_hal_uart.o"
+"6_joystick_oneadc\system_stm32f1xx.o"
+--strict --scatter "6_Joystick_OneADC\6_Joystick_OneADC.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "6_Joystick_OneADC.map" -o 6_Joystick_OneADC\6_Joystick_OneADC.axf

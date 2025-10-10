@@ -8,7 +8,7 @@
                 "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_Joystick_Module\\6_Joystick_Two_ADC\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
                 "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_Joystick_Module\\6_Joystick_Two_ADC\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
                 "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_Joystick_Module\\6_Joystick_Two_ADC\\Drivers\\CMSIS\\Include",
-                "C:\\keil5\\MDK-ARM\\ARM\\CMSIS-Compiler\\2.1.0\\include\\armcc",
+                "C:\\keil5\\MDK-ARM\\ARM\\ARMCC\\include",
                 "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_Joystick_Module\\6_Joystick_Two_ADC\\MDK-ARM",
                 "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_Joystick_Module\\6_Joystick_Two_ADC\\Core\\Src",
                 "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\6_Joystick_Module\\6_Joystick_Two_ADC\\Drivers\\STM32F1xx_HAL_Driver\\Src"
