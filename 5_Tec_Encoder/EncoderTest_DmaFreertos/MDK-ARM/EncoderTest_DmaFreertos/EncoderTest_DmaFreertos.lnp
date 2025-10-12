@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"encodertest_dmafreertos\startup_stm32f103xb.o"
+"encodertest_dmafreertos\main.o"
+"encodertest_dmafreertos\gpio.o"
+"encodertest_dmafreertos\dma.o"
+"encodertest_dmafreertos\tim.o"
+"encodertest_dmafreertos\usart.o"
+"encodertest_dmafreertos\stm32f1xx_it.o"
+"encodertest_dmafreertos\stm32f1xx_hal_msp.o"
+"encodertest_dmafreertos\stm32f1xx_hal_gpio_ex.o"
+"encodertest_dmafreertos\stm32f1xx_hal_tim.o"
+"encodertest_dmafreertos\stm32f1xx_hal_tim_ex.o"
+"encodertest_dmafreertos\stm32f1xx_hal.o"
+"encodertest_dmafreertos\stm32f1xx_hal_rcc.o"
+"encodertest_dmafreertos\stm32f1xx_hal_rcc_ex.o"
+"encodertest_dmafreertos\stm32f1xx_hal_gpio.o"
+"encodertest_dmafreertos\stm32f1xx_hal_dma.o"
+"encodertest_dmafreertos\stm32f1xx_hal_cortex.o"
+"encodertest_dmafreertos\stm32f1xx_hal_pwr.o"
+"encodertest_dmafreertos\stm32f1xx_hal_flash.o"
+"encodertest_dmafreertos\stm32f1xx_hal_flash_ex.o"
+"encodertest_dmafreertos\stm32f1xx_hal_exti.o"
+"encodertest_dmafreertos\stm32f1xx_hal_uart.o"
+"encodertest_dmafreertos\system_stm32f1xx.o"
+--strict --scatter "EncoderTest_DmaFreertos\EncoderTest_DmaFreertos.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "EncoderTest_DmaFreertos.map" -o EncoderTest_DmaFreertos\EncoderTest_DmaFreertos.axf

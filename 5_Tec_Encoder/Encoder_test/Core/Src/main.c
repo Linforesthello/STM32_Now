@@ -173,7 +173,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
-    int len = sprintf((char *)tx_buf, "cnt=%d,speed=%d\r\n", now, speed);
+    int len = sprintf((char *)tx_buf, "cnt,speed: %d,%d\r\n", now, speed);
     HAL_UART_Transmit(&huart1, tx_buf, len, HAL_MAX_DELAY);
   }
 }
