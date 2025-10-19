@@ -3,15 +3,15 @@
         {
             "name": "USART_Return",
             "includePath": [
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\4_USART\\USART_Return\\USART_Return\\Core\\Inc",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\4_USART\\USART_Return\\USART_Return\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\4_USART\\USART_Return\\USART_Return\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\4_USART\\USART_Return\\USART_Return\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\4_USART\\USART_Return\\USART_Return\\Drivers\\CMSIS\\Include",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_USART\\USART_Return\\USART_Return\\Core\\Inc",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_USART\\USART_Return\\USART_Return\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_USART\\USART_Return\\USART_Return\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_USART\\USART_Return\\USART_Return\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_USART\\USART_Return\\USART_Return\\Drivers\\CMSIS\\Include",
                 "C:\\keil5\\MDK-ARM\\ARM\\ARMCC\\include",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\4_USART\\USART_Return\\USART_Return\\MDK-ARM",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\4_USART\\USART_Return\\USART_Return\\Core\\Src",
-                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_Now\\4_USART\\USART_Return\\USART_Return\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_USART\\USART_Return\\USART_Return\\MDK-ARM",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_USART\\USART_Return\\USART_Return\\Core\\Src",
+                "c:\\Users\\86173\\Desktop\\ProjectRequirement\\MCU_Now\\Lin_STM32\\STM32_F103C8T6\\5_Tec_USART\\USART_Return\\USART_Return\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

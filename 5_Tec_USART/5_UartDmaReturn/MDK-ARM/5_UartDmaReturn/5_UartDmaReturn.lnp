@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"5_uartdmareturn\startup_stm32f103xb.o"
+"5_uartdmareturn\main.o"
+"5_uartdmareturn\gpio.o"
+"5_uartdmareturn\dma.o"
+"5_uartdmareturn\usart.o"
+"5_uartdmareturn\stm32f1xx_it.o"
+"5_uartdmareturn\stm32f1xx_hal_msp.o"
+"5_uartdmareturn\stm32f1xx_hal_gpio_ex.o"
+"5_uartdmareturn\stm32f1xx_hal_uart.o"
+"5_uartdmareturn\stm32f1xx_hal.o"
+"5_uartdmareturn\stm32f1xx_hal_rcc.o"
+"5_uartdmareturn\stm32f1xx_hal_rcc_ex.o"
+"5_uartdmareturn\stm32f1xx_hal_gpio.o"
+"5_uartdmareturn\stm32f1xx_hal_dma.o"
+"5_uartdmareturn\stm32f1xx_hal_cortex.o"
+"5_uartdmareturn\stm32f1xx_hal_pwr.o"
+"5_uartdmareturn\stm32f1xx_hal_flash.o"
+"5_uartdmareturn\stm32f1xx_hal_flash_ex.o"
+"5_uartdmareturn\stm32f1xx_hal_exti.o"
+"5_uartdmareturn\system_stm32f1xx.o"
+--strict --scatter "5_UartDmaReturn\5_UartDmaReturn.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "5_UartDmaReturn.map" -o 5_UartDmaReturn\5_UartDmaReturn.axf
