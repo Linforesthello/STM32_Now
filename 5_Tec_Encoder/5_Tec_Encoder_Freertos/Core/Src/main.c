@@ -29,9 +29,11 @@
 #include "cmsis_os2.h"
 #include "motor.h"
 
-extern osThreadId_t LogTaskHandle; 
-extern TIM_HandleTypeDef htim1;
+// extern osThreadId_t LogTaskHandle; 
+// extern TIM_HandleTypeDef htim1;
+
 Motor_t motor1; // 声明全局电机实例
+
 
 /* USER CODE END Includes */
 
@@ -100,7 +102,6 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_TIM1_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
   MX_USART1_UART_Init();
@@ -108,20 +109,21 @@ int main(void)
 
   // 启动编码器计数和 PWM 输出
   HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1); 
+  // HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1); 
 
   // 启动 TIM3 周期中断 (10ms 触发一次)
-  HAL_TIM_Base_Start_IT(&htim3); 
+  // HAL_TIM_Base_Start_IT(&htim3); 
 
   // TEST
   // __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 5000);
   // TEST
 
-  Motor_Init(&motor1, &htim1, TIM_CHANNEL_1,
+  Motor_Init(&motor1, &htim3, TIM_CHANNEL_1,
            GPIOB, GPIO_PIN_0,    // IN1 (例如 L298N 的 IN1)
            GPIOB, GPIO_PIN_1,    // IN2 (例如 L298N 的 IN2)
            GPIOB, GPIO_PIN_10,              // EN (如果没有独立的使能引脚，则为 NULL, 0)
-           9999, 1000, 50, 1, MOTOR_STOP_BRAKE);
+           1000, 1000, 50,
+           1, MOTOR_STOP_BRAKE);
 
   /* USER CODE END 2 */
 
@@ -190,26 +192,6 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 
-// void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-// {
-//   // 注意：HAL_GetTick() 现在基于 TIM4 运行
-//   if (htim->Instance == TIM3) // 10ms 测速中断
-//   {
-//     static int16_t last_cnt = 0; 
-//     int16_t now = (int16_t)__HAL_TIM_GET_COUNTER(&htim2);
-
-//     // 1. 速度计算 (快速操作)
-//     current_speed = now - last_cnt;
-//     last_cnt = now;
-
-//     // 2. 唤醒 LogTask (使用 CMSIS V2 任务通知)
-//     if (LogTaskHandle != NULL)
-//     {
-//       osThreadFlagsSet(LogTaskHandle, 0x01); // 设置标志位 0x01 唤醒 LogTask
-//     }
-//   }
-// }
-
 /* USER CODE END 4 */
 
 /**
@@ -231,21 +213,25 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   }
   /* USER CODE BEGIN Callback 1 */
 
-    if (htim->Instance == TIM3) // 10ms 测速中断
-  {
-    static int16_t last_cnt = 0; 
-    int16_t now = (int16_t)__HAL_TIM_GET_COUNTER(&htim2);
 
-    // 1. 速度计算 (快速操作)
-    current_speed = - (now - last_cnt);
-    last_cnt = now;
+// To see "Start_Feedback_test"
+// 把tim3定时中断，进行“发送-计数”取消；改为freertos中实现
 
-    // 2. 唤醒 LogTask (使用 CMSIS V2 任务通知)
-    if (LogTaskHandle != NULL)
-    {
-      osThreadFlagsSet(LogTaskHandle, 0x01); // 设置标志位 0x01 唤醒 LogTask
-    }
-  }
+  //   if (htim->Instance == TIM3) // 1ms 测速中断
+  // {
+  //   static int16_t last_cnt = 0; 
+  //   int16_t now = (int16_t)__HAL_TIM_GET_COUNTER(&htim2);
+
+  //   // 1. 速度计算 (快速操作)
+  //   current_speed = - (now - last_cnt);
+  //   last_cnt = now;
+
+  //   // 2. 唤醒 LogTask (使用 CMSIS V2 任务通知)
+  //   if (LogTaskHandle != NULL)
+  //   {
+  //     osThreadFlagsSet(LogTaskHandle, 0x01); // 设置标志位 0x01 唤醒 LogTask
+  //   }
+  // }
 
   /* USER CODE END Callback 1 */
 }

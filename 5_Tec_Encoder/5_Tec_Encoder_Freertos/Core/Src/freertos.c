@@ -50,7 +50,7 @@
 
 extern volatile int16_t current_speed; 
 extern TIM_HandleTypeDef htim2; 
-extern UART_HandleTypeDef huart1; 
+extern UART_HandleTypeDef huart1;
 // extern TIM_HandleTypeDef htim1;
 extern Motor_t motor1; // 声明全局电机实例
 
@@ -80,6 +80,13 @@ const osThreadAttr_t MotorTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
+/* Definitions for Feedback_test */
+osThreadId_t Feedback_testHandle;
+const osThreadAttr_t Feedback_test_attributes = {
+  .name = "Feedback_test",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityAboveNormal,
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -89,6 +96,7 @@ const osThreadAttr_t MotorTask_attributes = {
 void Start_LedTask(void *argument);
 void Start_LogTask(void *argument);
 void Start_MotorTask(void *argument);
+void Start_Feedback_test(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -127,6 +135,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of MotorTask */
   MotorTaskHandle = osThreadNew(Start_MotorTask, NULL, &MotorTask_attributes);
+
+  /* creation of Feedback_test */
+  Feedback_testHandle = osThreadNew(Start_Feedback_test, NULL, &Feedback_test_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -185,12 +196,12 @@ void Start_LogTask(void *argument)
     uint32_t cnt_val = __HAL_TIM_GET_COUNTER(&htim2); 
 
     // 2. 格式化数据
-    int len = sprintf((char *)tx_buf, "cnt=%ld,speed=%d\r\n", cnt_val, speed_val);
+    int len = sprintf((char *)tx_buf, "%ld,%d\r\n", cnt_val, speed_val);
 
     // 3. 串口发送 (耗时操作，安全)
     HAL_UART_Transmit(&huart1, tx_buf, len, HAL_MAX_DELAY);
 
-    // osDelay(1);
+    osDelay(1);
   }
   /* USER CODE END Start_LogTask */
 }
@@ -208,41 +219,73 @@ void Start_MotorTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+    // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
     Motor_SetSpeed(&motor1, 1000); // 正转
-    osDelay(2000);
+    osDelay(1000);
 
 
-    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+    // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
     Motor_SetSpeed(&motor1, 0); // 停止
     osDelay(1000);
 
-    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-    Motor_SetSpeed(&motor1, -50); // 反转
-    osDelay(2000);
+    // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+    Motor_SetSpeed(&motor1, -1000); // 反转
+    osDelay(1000);
 
-        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-    Motor_SetSpeed(&motor1, -100); // 反转
-    osDelay(2000);
+    //     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+    // Motor_SetSpeed(&motor1, -100); // 反转
+    // osDelay(1000);
 
-        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-    Motor_SetSpeed(&motor1, -200); // 反转
-    osDelay(2000);
+    //     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+    // Motor_SetSpeed(&motor1, -1000); // 反转
+    // osDelay(1000);
 
-        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-    Motor_SetSpeed(&motor1, -300); // 反转
-    osDelay(2000);
+    //     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+    // Motor_SetSpeed(&motor1, -300); // 反转
+    // osDelay(2000);
 
-        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-    Motor_SetSpeed(&motor1, -400); // 反转
-    osDelay(2000);
+    //     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+    // Motor_SetSpeed(&motor1, -400); // 反转
+    // osDelay(2000);
 
-        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-    Motor_SetSpeed(&motor1, -500); // 反转
-    osDelay(2000);
+    //     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+    // Motor_SetSpeed(&motor1, -500); // 反转
+    // osDelay(2000);
+    Motor_SetSpeed(&motor1, 0); // 停止
     osDelay(1000);
   }
   /* USER CODE END Start_MotorTask */
+}
+
+/* USER CODE BEGIN Header_Start_Feedback_test */
+/**
+* @brief Function implementing the Feedback_test thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Start_Feedback_test */
+void Start_Feedback_test(void *argument)
+{
+  /* USER CODE BEGIN Start_Feedback_test */
+  /* Infinite loop */
+  for(;;)
+  {
+    static int16_t last_cnt = 0; 
+    int16_t now = (int16_t)__HAL_TIM_GET_COUNTER(&htim2);
+
+    // 1. 速度计算 (快速操作)
+    current_speed =  (now - last_cnt);
+    // current_speed = - (now - last_cnt);
+    last_cnt = now;
+
+    // 2. 唤醒 LogTask (使用 CMSIS V2 任务通知)
+    if (LogTaskHandle != NULL)
+    {
+      osThreadFlagsSet(LogTaskHandle, 0x01); // 设置标志位 0x01 唤醒 LogTask
+    }
+    osDelay(10); // 10ms 测速周期
+  }
+  /* USER CODE END Start_Feedback_test */
 }
 
 /* Private application code --------------------------------------------------*/

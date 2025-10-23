@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"5_tec_icm42688\startup_stm32f103xb.o"
+"5_tec_icm42688\main.o"
+"5_tec_icm42688\gpio.o"
+"5_tec_icm42688\i2c.o"
+"5_tec_icm42688\usart.o"
+"5_tec_icm42688\stm32f1xx_it.o"
+"5_tec_icm42688\stm32f1xx_hal_msp.o"
+"5_tec_icm42688\stm32f1xx_hal_gpio_ex.o"
+"5_tec_icm42688\stm32f1xx_hal_i2c.o"
+"5_tec_icm42688\stm32f1xx_hal.o"
+"5_tec_icm42688\stm32f1xx_hal_rcc.o"
+"5_tec_icm42688\stm32f1xx_hal_rcc_ex.o"
+"5_tec_icm42688\stm32f1xx_hal_gpio.o"
+"5_tec_icm42688\stm32f1xx_hal_dma.o"
+"5_tec_icm42688\stm32f1xx_hal_cortex.o"
+"5_tec_icm42688\stm32f1xx_hal_pwr.o"
+"5_tec_icm42688\stm32f1xx_hal_flash.o"
+"5_tec_icm42688\stm32f1xx_hal_flash_ex.o"
+"5_tec_icm42688\stm32f1xx_hal_exti.o"
+"5_tec_icm42688\stm32f1xx_hal_uart.o"
+"5_tec_icm42688\system_stm32f1xx.o"
+--strict --scatter "5_Tec_ICM42688\5_Tec_ICM42688.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "5_Tec_ICM42688.map" -o 5_Tec_ICM42688\5_Tec_ICM42688.axf

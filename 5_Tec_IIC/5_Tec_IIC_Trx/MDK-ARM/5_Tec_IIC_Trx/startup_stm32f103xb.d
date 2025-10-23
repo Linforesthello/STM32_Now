@@ -1,0 +1,1 @@
+5_tec_iic_trx\startup_stm32f103xb.o: startup_stm32f103xb.s

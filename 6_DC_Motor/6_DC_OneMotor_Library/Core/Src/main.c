@@ -60,28 +60,7 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-void Motor_Test(void)
-{
-    // 正转 50%
-    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
-    Motor_SetSpeed(&motor1, 500);
-    HAL_Delay(2000);
-
-    // 停止
-    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
-    Motor_Stop(&motor1);
-    HAL_Delay(1000);
-
-    // 反转 80%
-    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
-    Motor_SetSpeed(&motor1, -800);
-    HAL_Delay(2000);
-
-    // 停止
-    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
-    Motor_Stop(&motor1);
-    HAL_Delay(1000);
-}
+void Motor_Test(void);
 
 /* USER CODE END 0 */
 
@@ -121,7 +100,7 @@ int main(void)
                GPIOB, GPIO_PIN_0, GPIOB, GPIO_PIN_1,
                GPIOB, GPIO_PIN_10,
                1000, 1000, 50,
-               0, MOTOR_STOP_BRAKE);
+               1, MOTOR_STOP_BRAKE);
 
   Motor_Test();  // 测试电机库函数
 
@@ -183,6 +162,28 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 
+void Motor_Test(void)
+{
+    // 正转 50%
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
+    Motor_SetSpeed(&motor1, 800);
+    HAL_Delay(2000);
+
+    // 停止
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
+    Motor_Stop(&motor1);
+    HAL_Delay(1000);
+
+    // 反转 80%
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
+    Motor_SetSpeed(&motor1, -1000);
+    HAL_Delay(2000);
+
+    // 停止
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 翻转LED
+    Motor_Stop(&motor1);
+    HAL_Delay(1000);
+}
 
 
 /* USER CODE END 4 */
