@@ -200,7 +200,7 @@ void Start_MotorControl(void *argument)
   {
     if (motor_enable_flag == 0)
     {
-      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+      // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
       Motor_SetSpeed(&motor1, 0); // 停止
       osDelay(1);
     }
@@ -213,7 +213,7 @@ void Start_MotorControl(void *argument)
 
       motor_enable_flag = 0; // 运行一次后复位标志
 
-      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+      // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
       Motor_SetSpeed(&motor1, 0); // 停止
       osDelay(1000);
     }
@@ -225,14 +225,14 @@ void Start_MotorControl(void *argument)
 
       motor_enable_flag = 0; // 运行一次后复位标志
 
-      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+      // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
       Motor_SetSpeed(&motor1, 0); // 停止
       osDelay(1000);
       // motor_enable_flag = 0; // 运行一次后复位标志
     }
     else if (motor_enable_flag == 3)
     {
-      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
+      // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
       Motor_SetSpeed(&motor1, 0); // 停止
       osDelay(1);
     }
@@ -254,7 +254,7 @@ void Start_Heartbeat(void *argument)
   for(;;)
   {
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-    osDelay(500);
+    osDelay(50);
   }
   /* USER CODE END Start_Heartbeat */
 }
