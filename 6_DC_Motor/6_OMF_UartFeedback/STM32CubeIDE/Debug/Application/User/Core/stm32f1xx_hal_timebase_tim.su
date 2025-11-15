@@ -1,0 +1,3 @@
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/stm32f1xx_hal_timebase_tim.c:42:19:HAL_InitTick	64	static
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/stm32f1xx_hal_timebase_tim.c:121:6:HAL_SuspendTick	4	static
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/stm32f1xx_hal_timebase_tim.c:133:6:HAL_ResumeTick	4	static

@@ -1,0 +1,7 @@
+{
+      "files.associations": {
+            "command.h": "c",
+            "string.h": "c",
+            "motor.h": "c"
+      }
+}

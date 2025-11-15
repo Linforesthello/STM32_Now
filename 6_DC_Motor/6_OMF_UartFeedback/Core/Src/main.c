@@ -27,8 +27,10 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "motor.h"
-#include "string.h"
+#include "string.h"   // 引入字符串处理库
+#include "motor.h"    // 引入电机控制模块
+#include "command.h"  // 引入命令解析模块
+#include "uart_app.h" // 引入 UART 应用层模块
 
 /* USER CODE END Includes */
 
@@ -52,17 +54,6 @@
 /* USER CODE BEGIN PV */
 
 Motor_t motor1; // 声明全局电机实例
-
-// 全局速度变量：使用 volatile 确保变量在中断和任务间正确同步
-volatile int16_t current_speed = 0; // 当前速度
-
-// #define UART2_TX_BUF_LEN 64
-uint8_t uart2_rx_data;                      // 单字节接收缓冲
-uint8_t uart2_tx_buf[64];     // 发送缓冲
-volatile uint8_t uart2_tx_busy = 0;         // 发送忙标志
-volatile uint8_t motor_enable_flag = 0;     // 电机控制标志
-// uint8_t uart2_tx_busy = 0;
-// uint8_t motor_enable_flag = 0;
 
 /* USER CODE END PV */
 
@@ -113,10 +104,11 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  
-  HAL_UART_Receive_IT(&huart2, &uart2_rx_data, 1);
 
-    // 启动编码器计数
+  UART_App_Init();
+  // HAL_UART_Receive_IT(&huart2, &uart2_rx_data, 1);
+
+  // 启动编码器计数
   HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
 
     Motor_Init(&motor1, &htim3, TIM_CHANNEL_1,
@@ -192,49 +184,6 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
-void UART2_Print(const char *msg)
-{
-    if (uart2_tx_busy) return;  // 若上次发送未完成则丢弃（简化处理）
-    uint16_t len = strlen(msg);
-    if (len > 64) len = 64;
-
-    memcpy(uart2_tx_buf, msg, len);
-    uart2_tx_busy = 1;
-    HAL_UART_Transmit_IT(&huart2, uart2_tx_buf, len);
-}
-
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-    if (huart->Instance == USART2)
-    {
-        if (uart2_rx_data == '1') {
-            motor_enable_flag = 1;
-            UART2_Print("Motor CW\r\n");
-        }
-        else if (uart2_rx_data == '2') {
-            motor_enable_flag = 2;
-            UART2_Print("Motor CCW\r\n");
-        }
-        else {
-            motor_enable_flag = 3;
-            UART2_Print("Unknown CMD,will stop\r\n");
-        }
-
-        // 重新启动接收
-        HAL_UART_Receive_IT(&huart2, &uart2_rx_data, 1);
-    }
-}
-
-void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
-{
-    if (huart->Instance == USART2)
-    {
-        uart2_tx_busy = 0; // 释放发送锁
-    }
-}
-
-
 
 /* USER CODE END 4 */
 

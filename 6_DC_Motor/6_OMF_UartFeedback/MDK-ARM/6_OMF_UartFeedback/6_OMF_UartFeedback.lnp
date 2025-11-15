@@ -1,6 +1,8 @@
 --cpu Cortex-M3
 "6_omf_uartfeedback\startup_stm32f103xb.o"
 "6_omf_uartfeedback\motor.o"
+"6_omf_uartfeedback\command.o"
+"6_omf_uartfeedback\uart_app.o"
 "6_omf_uartfeedback\main.o"
 "6_omf_uartfeedback\gpio.o"
 "6_omf_uartfeedback\freertos.o"

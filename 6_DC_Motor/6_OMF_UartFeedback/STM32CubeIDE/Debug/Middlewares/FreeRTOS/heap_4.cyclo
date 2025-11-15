@@ -1,0 +1,8 @@
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:115:7:pvPortMalloc	15
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:266:6:vPortFree	6
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:315:8:xPortGetFreeHeapSize	1
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:321:8:xPortGetMinimumEverFreeHeapSize	1
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:327:6:vPortInitialiseBlocks	1
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:333:13:prvHeapInit	2
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:381:13:prvInsertBlockIntoFreeList	6
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c:442:6:vPortGetHeapStats	5

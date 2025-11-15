@@ -28,6 +28,7 @@
 
 #include "stdio.h"
 #include "motor.h"
+#include "command.h"
 
 /* USER CODE END Includes */
 
@@ -55,20 +56,14 @@ extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 
 extern Motor_t motor1;
-extern volatile int16_t current_speed;
+// extern volatile int16_t current_speed;
 
 uint8_t tx_buf[50];
-
-// extern UART2_TX_BUF_LEN
-extern uint8_t uart2_rx_data;                      // 单字节接收缓冲
-extern uint8_t uart2_tx_buf[64];     // 发送缓冲
-extern volatile uint8_t uart2_tx_busy;         // 发送忙标志
-extern volatile uint8_t motor_enable_flag;     // 电机控制标志
 
 /* USER CODE END Variables */
 /* Definitions for MotorControlTas */
 osThreadId_t MotorControlTasHandle;
-uint32_t MotorControlTasBuffer[ 256 ];
+uint32_t MotorControlTasBuffer[ 192 ];
 osStaticThreadDef_t MotorControlTasControlBlock;
 const osThreadAttr_t MotorControlTas_attributes = {
   .name = "MotorControlTas",
@@ -156,7 +151,7 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the queue(s) */
   /* creation of CommandQueue */
-  CommandQueueHandle = osMessageQueueNew (16, sizeof(uint16_t), &CommandQueue_attributes);
+  CommandQueueHandle = osMessageQueueNew (32, sizeof(uint64_t), &CommandQueue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -195,47 +190,62 @@ void MX_FREERTOS_Init(void) {
 void Start_MotorControl(void *argument)
 {
   /* USER CODE BEGIN Start_MotorControl */
+
+  // uint8_t cmd;
+  CommandMsg_t cmdMsg;
+
   /* Infinite loop */
   for(;;)
   {
-    if (motor_enable_flag == 0)
+    if (osMessageQueueGet(CommandQueueHandle, &cmdMsg, NULL, osWaitForever) == osOK)
     {
-      // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-      Motor_SetSpeed(&motor1, 0); // 停止
-      osDelay(1);
+      switch (cmdMsg.type)
+      {
+        case CMD_FORWARD:
+            Motor_SetSpeed(&motor1, 800);
+            // UART2_Print("CMD: Forward\r\n");
+            break;
+        case CMD_REVERSE:
+            Motor_SetSpeed(&motor1, -800);
+            // UART2_Print("CMD: Reverse\r\n");
+            break;
+        case CMD_STOP:
+            Motor_Stop(&motor1);
+            // UART2_Print("CMD: Stop\r\n");
+            break;
+        case CMD_SET_SPEED:
+            Motor_SetSpeed(&motor1, cmdMsg.value);
+            break;
+
+        default:
+            // Motor_Stop(&motor1);
+            break;
+      }
     }
-    else if (motor_enable_flag == 1)
-    {
-
-      // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-      Motor_SetSpeed(&motor1, 1000); // 正转
-      osDelay(2000);
-
-      motor_enable_flag = 0; // 运行一次后复位标志
-
-      // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-      Motor_SetSpeed(&motor1, 0); // 停止
-      osDelay(1000);
-    }
-    else if (motor_enable_flag == 2)
-    {
-      // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-      Motor_SetSpeed(&motor1, -800); // 反转
-      osDelay(2000);
-
-      motor_enable_flag = 0; // 运行一次后复位标志
-
-      // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-      Motor_SetSpeed(&motor1, 0); // 停止
-      osDelay(1000);
-      // motor_enable_flag = 0; // 运行一次后复位标志
-    }
-    else if (motor_enable_flag == 3)
-    {
-      // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13); // 切换 LED 状态，观察任务运行情况
-      Motor_SetSpeed(&motor1, 0); // 停止
-      osDelay(1);
-    }
+    // if (osMessageQueueGet(CommandQueueHandle, &cmd, NULL, 0) == osOK)
+    //   {
+    // Command_Parse(cmd);
+    //   }
+    //   // 取消延时，改为根据标志位控制电机动作
+    //   switch (motor_enable_flag)
+    //     {
+    //       case 1:
+    //           Motor_SetSpeed(&motor1, 1000);
+    //           // osDelay(1000);
+    //           // motor_enable_flag = 3;
+    //           break;
+    //       case 2:
+    //           Motor_SetSpeed(&motor1, -800);
+    //           // osDelay(1000);
+    //           // motor_enable_flag = 3;
+    //           break;
+    //       default:
+    //           // Motor_SetSpeed(&motor1, 0);
+    //           Motor_Stop(&motor1);
+    //           motor_enable_flag = 3;
+    //           break;
+    //     }
+    osDelay(10);
   }
   /* USER CODE END Start_MotorControl */
 }
@@ -254,7 +264,7 @@ void Start_Heartbeat(void *argument)
   for(;;)
   {
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-    osDelay(50);
+    osDelay(200);
   }
   /* USER CODE END Start_Heartbeat */
 }
@@ -275,10 +285,29 @@ void Start_SpeedMeasure(void *argument)
     static int16_t last_cnt = 0; 
     int16_t now = (int16_t)__HAL_TIM_GET_COUNTER(&htim2);
 
-    // 1. 速度计算 (快速操作)
-    current_speed =  (now - last_cnt);
-    // current_speed = - (now - last_cnt);
+
+    int32_t diff = (int16_t)(now - last_cnt);
+    if (diff > 32768) 
+    {
+      diff -= 65536;
+    }
+    else if (diff < -32768) 
+    {
+      diff += 65536;
+    }
     last_cnt = now;
+    motor1.current_speed = diff;
+
+
+    // // 2025.10.27 改进速度计算，解决计数器溢出问题
+    // int16_t diff = (int16_t)(now - last_cnt);
+    // last_cnt = now;
+    // current_speed = diff;  // 保留符号方向
+
+    // 1. 速度计算 (快速操作)
+    // current_speed =  (now - last_cnt);
+    // current_speed = - (now - last_cnt);
+    // last_cnt = now;
 
     // 2. 唤醒 LogTask (使用 CMSIS V2 任务通知)
     if (SerialLogTaskHandle != NULL)
@@ -286,7 +315,6 @@ void Start_SpeedMeasure(void *argument)
       osThreadFlagsSet(SerialLogTaskHandle, 0x01); // 设置标志位 0x01 唤醒 LogTask
     }
     osDelay(10); // 10ms 测速周期可行；1ms不行，完不成就过掉了
-    // osDelay(1);    //冗余
   }
   /* USER CODE END Start_SpeedMeasure */
 }
@@ -311,17 +339,26 @@ void Start_SerialLog(void *argument)
     // 收到标志位 (每 10ms 唤醒一次) 后执行耗时 I/O：
 
     // 1. 安全地读取速度
-    int16_t speed_val = current_speed;
+    int16_t speed_val = motor1.current_speed;
     uint32_t cnt_val = __HAL_TIM_GET_COUNTER(&htim2); 
 
     // 2. 格式化数据
-    int len = sprintf((char *)tx_buf, "%ld,%d\r\n", cnt_val, speed_val);
+    int len = sprintf((char *)tx_buf, "%ld,%ld,%ld,%ld,%ld\r\n",HAL_GetTick(), cnt_val, speed_val,
+                     - motor1.target_speed, motor1.pwm_output);
 
     // 3. 串口发送，DMA 方式
     // HAL_UART_Transmit(&huart1, tx_buf, len, HAL_MAX_DELAY);
-    HAL_UART_Transmit_DMA(&huart1, tx_buf, len);
+    if (HAL_UART_GetState(&huart1) == HAL_UART_STATE_READY)
+    {
+      HAL_UART_Transmit_DMA(&huart1, tx_buf, len);
+    }
+    else 
+    {
+      osDelay(5); // 如果 UART 忙，稍等一下再发
+    }
+    // HAL_UART_Transmit_DMA(&huart1, tx_buf, len);
 
-    osDelay(1);
+    osDelay(10);
   }
   /* USER CODE END Start_SerialLog */
 }

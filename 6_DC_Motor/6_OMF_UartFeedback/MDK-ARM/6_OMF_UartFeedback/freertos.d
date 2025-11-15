@@ -41,3 +41,4 @@
 6_omf_uartfeedback\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 6_omf_uartfeedback\freertos.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
 6_omf_uartfeedback\freertos.o: ../Core/Inc/motor.h
+6_omf_uartfeedback\freertos.o: ../Core/Inc/command.h

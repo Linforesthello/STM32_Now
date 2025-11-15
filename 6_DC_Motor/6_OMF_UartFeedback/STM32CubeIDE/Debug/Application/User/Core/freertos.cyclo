@@ -1,0 +1,5 @@
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/freertos.c:140:6:MX_FREERTOS_Init	1
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/freertos.c:195:6:Start_MotorControl	5
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/freertos.c:250:6:Start_Heartbeat	1
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/freertos.c:269:6:Start_SpeedMeasure	2
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/freertos.c:301:6:Start_SerialLog	1

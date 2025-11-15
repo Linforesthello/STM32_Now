@@ -43,5 +43,7 @@
 6_omf_uartfeedback\main.o: ../Core/Inc/tim.h
 6_omf_uartfeedback\main.o: ../Core/Inc/usart.h
 6_omf_uartfeedback\main.o: ../Core/Inc/gpio.h
-6_omf_uartfeedback\main.o: ../Core/Inc/motor.h
 6_omf_uartfeedback\main.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
+6_omf_uartfeedback\main.o: ../Core/Inc/motor.h
+6_omf_uartfeedback\main.o: ../Core/Inc/command.h
+6_omf_uartfeedback\main.o: ../Core/Inc/uart_app.h

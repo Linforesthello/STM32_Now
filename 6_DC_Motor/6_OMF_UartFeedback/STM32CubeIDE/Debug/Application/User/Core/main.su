@@ -1,0 +1,7 @@
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/main.c:85:5:main	48	static
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/main.c:155:6:SystemClock_Config	72	static
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/main.c:196:6:UART2_Print	24	static
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/main.c:207:6:HAL_UART_RxCpltCallback	16	static
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/main.c:229:6:HAL_UART_TxCpltCallback	16	static
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/main.c:249:6:HAL_TIM_PeriodElapsedCallback	16	static
+C:/Users/86173/Desktop/ProjectRequirement/MCU_Now/Lin_STM32/STM32_F103C8T6/6_DC_Motor/6_OMF_UartFeedback/Core/Src/main.c:267:6:Error_Handler	4	static,ignoring_inline_asm
