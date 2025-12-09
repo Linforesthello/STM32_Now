@@ -116,7 +116,7 @@ int main(void)
            GPIOB, GPIO_PIN_1,
            GPIOB, GPIO_PIN_10,              // EN (如果没有独立的使能引脚，则为 NULL, 0)
            1000, 1000, 50,
-           1, MOTOR_STOP_BRAKE);
+           0, MOTOR_STOP_BRAKE);
 
   /* USER CODE END 2 */
 
@@ -177,10 +177,6 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-
-  /** Enables the Clock Security System
-  */
-  HAL_RCC_EnableCSS();
 }
 
 /* USER CODE BEGIN 4 */
