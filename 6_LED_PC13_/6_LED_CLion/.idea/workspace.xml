@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="6_LED_CLion" targetName="6_LED_CLion" />
+      <config projectName="6_LED_CLion" targetName="STM32_Drivers" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="false" FROM_PRESET="true" GENERATION_DIR="$PROJECT_DIR$/build/Release" />
+      <configuration PROFILE_NAME="Debug - Debug" ENABLED="false" FROM_PRESET="true" GENERATION_DIR="$PROJECT_DIR$/build/Debug" />
+      <configuration PROFILE_NAME="Release - Release" ENABLED="false" FROM_PRESET="true" GENERATION_DIR="$PROJECT_DIR$/build/Release" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="91828ac1-8b6b-4f0e-8df1-45d2f160a717" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/Core/Inc/motor.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/Core/Inc/motor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/Core/Src/command.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/Core/Src/command.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/Core/Src/freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/Core/Src/freertos.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/Core/Src/motor.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/Core/Src/motor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/.vscode/keil-assistant.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/.vscode/keil-assistant.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/.vscode/uv4.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/.vscode/uv4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/.vscode/uv4.log.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/.vscode/uv4.log.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/6_OMF_UartFeedback.axf" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/6_OMF_UartFeedback.axf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/6_OMF_UartFeedback.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/6_OMF_UartFeedback.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/6_OMF_UartFeedback.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/6_OMF_UartFeedback.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/command.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/command.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/command.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/command.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/freertos.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/freertos.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/freertos.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/freertos.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/main.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/main.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/motor.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/motor.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/motor.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/motor.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/uart_app.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/uart_app.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/uart_app.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../6_DC_Motor/6_OMF_UartFeedback/MDK-ARM/6_OMF_UartFeedback/uart_app.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/6_LED_CLion.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/debugServers/Config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/debugServers/ST_LINK.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6_LedFreertos_CLion/6_LedFreertos_CLion.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/../6_LedFreertos_CLion/6_LedFreertos_CLion.ioc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LED_PC13/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../LED_PC13/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LED_PC13/LED_PC13.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/../LED_PC13/LED_PC13.ioc" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="2.3" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="33rmo6s5xRmhxmOXHuJa2V5DV6l" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.main.c.executor": "Run",
+    "C/C++ 文件.main.c.executor": "Run",
+    "CMake Application.6_LED_CLion.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.cidr.embedded.config",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="C/C++ 文件.main.c">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="6_LED_CLion" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="6_LED_CLion" TARGET_NAME="6_LED_CLion" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="6_LED_CLion" RUN_TARGET_NAME="6_LED_CLion">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="STM32_Drivers" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="6_LED_CLion" TARGET_NAME="STM32_Drivers" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="6_LED_CLion" TARGET_NAME="main.c" CONFIG_NAME="main.c">
+      <option name="sourceFile" value="Core\Src\main.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ 文件.main.c" />
+      <item itemvalue="CMake 应用程序.6_LED_CLion" />
+      <item itemvalue="CMake 应用程序.STM32_Drivers" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ 文件.main.c" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91828ac1-8b6b-4f0e-8df1-45d2f160a717" name="Changes" comment="" />
+      <created>1760083737200</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760083737200</updated>
+      <workItem from="1760083738260" duration="594000" />
+      <workItem from="1760084348096" duration="24000" />
+      <workItem from="1760084381207" duration="11000" />
+      <workItem from="1760084399304" duration="3000" />
+      <workItem from="1760084421840" duration="94000" />
+      <workItem from="1761385546403" duration="10000" />
+      <workItem from="1763296706547" duration="523000" />
+      <workItem from="1763297862051" duration="912000" />
+      <workItem from="1763299303051" duration="514000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

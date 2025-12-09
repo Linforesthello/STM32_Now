@@ -7,12 +7,12 @@
 #define MAX_SPEED 1000
 #define MIN_SPEED -1000
 
-//=================== ÐÂ°æ£º×Ö·û´®ÃüÁî½âÎö ===================//
-// ÀýÈç£º
-// "S500" ¡ú CMD_SET_SPEED, value=500
-// "F"    ¡ú CMD_FORWARD
-// "R"    ¡ú CMD_REVERSE
-// "X"    ¡ú CMD_STOP
+//=================== æ–°ç‰ˆï¼šå­—ç¬¦ä¸²å‘½ä»¤è§£æž ===================//
+// ä¾‹å¦‚ï¼š
+// "S500" â†’ CMD_SET_SPEED, value=500
+// "F"    â†’ CMD_FORWARD
+// "R"    â†’ CMD_REVERSE
+// "X"    â†’ CMD_STOP
 CommandMsg_t Command_ParseString(const char *cmdStr)
 {
     CommandMsg_t msg = {CMD_NONE, 0};
@@ -20,24 +20,24 @@ CommandMsg_t Command_ParseString(const char *cmdStr)
     if (cmdStr == NULL || cmdStr[0] == '\0')
         return msg;
 
-    // ¸ñÊ½ 1: S500 ¡ú ÉèÖÃËÙ¶È
+    // æ ¼å¼ 1: S500 â†’ è®¾ç½®é€Ÿåº¦
     if (cmdStr[0] == 'S' || cmdStr[0] == 's') {
         msg.type = CMD_SET_SPEED;
-        msg.value = atoi(&cmdStr[1]);  // ÌáÈ¡ÊýÖµ
+        msg.value = atoi(&cmdStr[1]);  // æå–æ•°å€¼
 
         if (msg.value > MAX_SPEED) msg.value = MAX_SPEED;
         if (msg.value < -MAX_SPEED) msg.value = -MAX_SPEED;
 
     }
-    // ¸ñÊ½ 2: F ¡ú Forward
+    // æ ¼å¼ 2: F â†’ Forward
     else if (cmdStr[0] == 'F' || cmdStr[0] == 'f') {
         msg.type = CMD_FORWARD;
     }
-    // ¸ñÊ½ 3: R ¡ú Reverse
+    // æ ¼å¼ 3: R â†’ Reverse
     else if (cmdStr[0] == 'R' || cmdStr[0] == 'r') {
         msg.type = CMD_REVERSE;
     }
-    // ¸ñÊ½ 4: X ¡ú Stop
+    // æ ¼å¼ 4: X â†’ Stop
     else if (cmdStr[0] == 'X' || cmdStr[0] == 'x') {
         msg.type = CMD_STOP;
     }

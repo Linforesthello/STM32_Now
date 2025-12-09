@@ -214,6 +214,7 @@ void Start_MotorControl(void *argument)
             // UART2_Print("CMD: Stop\r\n");
             break;
         case CMD_SET_SPEED:
+            // 用的最多
             Motor_SetSpeed(&motor1, cmdMsg.value);
             break;
 
@@ -222,29 +223,6 @@ void Start_MotorControl(void *argument)
             break;
       }
     }
-    // if (osMessageQueueGet(CommandQueueHandle, &cmd, NULL, 0) == osOK)
-    //   {
-    // Command_Parse(cmd);
-    //   }
-    //   // 取消延时，改为根据标志位控制电机动作
-    //   switch (motor_enable_flag)
-    //     {
-    //       case 1:
-    //           Motor_SetSpeed(&motor1, 1000);
-    //           // osDelay(1000);
-    //           // motor_enable_flag = 3;
-    //           break;
-    //       case 2:
-    //           Motor_SetSpeed(&motor1, -800);
-    //           // osDelay(1000);
-    //           // motor_enable_flag = 3;
-    //           break;
-    //       default:
-    //           // Motor_SetSpeed(&motor1, 0);
-    //           Motor_Stop(&motor1);
-    //           motor_enable_flag = 3;
-    //           break;
-    //     }
     osDelay(10);
   }
   /* USER CODE END Start_MotorControl */

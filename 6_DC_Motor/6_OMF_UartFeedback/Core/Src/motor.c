@@ -3,21 +3,21 @@
 #include "stdio.h"
 
 /**
- * @brief ³õÊ¼»¯µç»ú½á¹¹ÌåºÍÓ²¼þ
- * @param motor      µç»ú½á¹¹ÌåÖ¸Õë
- * @param htim       PWM ¶¨Ê±Æ÷¾ä±ú
- * @param Channel    PWM Í¨µÀ
- * @param IN1_Port   IN1 GPIO ¶Ë¿Ú
- * @param IN1_Pin    IN1 GPIO Òý½Å
- * @param IN2_Port   IN2 GPIO ¶Ë¿Ú
- * @param IN2_Pin    IN2 GPIO Òý½Å
- * @param EN_Port    EN Ê¹ÄÜ GPIO ¶Ë¿Ú£¨¿ÉÑ¡£©
- * @param EN_Pin     EN Ê¹ÄÜ GPIO Òý½Å
- * @param MaxPWM     TIM PWM ×î´ó¼ÆÊýÖµ
- * @param MaxSpeed   ÓÃ»§Âß¼­×î´óËÙ¶È
- * @param DeadZone   PWM ËÀÇø
- * @param Polarity   ¼«ÐÔ·´×ª±êÖ¾£¨0=Õý³£,1=·´×ª£©
- * @param StopMode   Í£Ö¹Ä£Ê½
+ * @brief åˆå§‹åŒ–ç”µæœºç»“æž„ä½“å’Œç¡¬ä»¶
+ * @param motor      ç”µæœºç»“æž„ä½“æŒ‡é’ˆ
+ * @param htim       PWM å®šæ—¶å™¨å¥æŸ„
+ * @param Channel    PWM é€šé“
+ * @param IN1_Port   IN1 GPIO ç«¯å£
+ * @param IN1_Pin    IN1 GPIO å¼•è„š
+ * @param IN2_Port   IN2 GPIO ç«¯å£
+ * @param IN2_Pin    IN2 GPIO å¼•è„š
+ * @param EN_Port    EN ä½¿èƒ½ GPIO ç«¯å£ï¼ˆå¯é€‰ï¼‰
+ * @param EN_Pin     EN ä½¿èƒ½ GPIO å¼•è„š
+ * @param MaxPWM     TIM PWM æœ€å¤§è®¡æ•°å€¼
+ * @param MaxSpeed   ç”¨æˆ·é€»è¾‘æœ€å¤§é€Ÿåº¦
+ * @param DeadZone   PWM æ­»åŒº
+ * @param Polarity   æžæ€§åè½¬æ ‡å¿—ï¼ˆ0=æ­£å¸¸,1=åè½¬ï¼‰
+ * @param StopMode   åœæ­¢æ¨¡å¼
  */
 void Motor_Init(Motor_t *motor,
                 TIM_HandleTypeDef *htim, uint32_t Channel,
@@ -27,7 +27,7 @@ void Motor_Init(Motor_t *motor,
                 uint16_t MaxPWM, int16_t MaxSpeed, uint16_t DeadZone,
                 uint8_t Polarity, MotorStopMode_t StopMode)
 {
-    // Ó²¼þ°ó¶¨
+    // ç¡¬ä»¶ç»‘å®š
     motor->htim = htim;
     motor->Channel = Channel;
     motor->IN1_Port = IN1_Port;
@@ -37,22 +37,22 @@ void Motor_Init(Motor_t *motor,
     motor->EN_Port = EN_Port;
     motor->EN_Pin = EN_Pin;
 
-    // ²ÎÊý°ó¶¨
+    // å‚æ•°ç»‘å®š
     motor->MaxPWM = MaxPWM;
     motor->MaxSpeed = MaxSpeed;
     motor->DeadZone = DeadZone;
     motor->Polarity = (Polarity > 0) ? 1 : 0;
     motor->StopMode = (StopMode == MOTOR_STOP_BRAKE) ? MOTOR_STOP_BRAKE : MOTOR_STOP_COAST;
 
-    // ³õÊ¼»¯×´Ì¬
+    // åˆå§‹åŒ–çŠ¶æ€
     motor->current_speed = 0;
     motor->target_speed  = 0;
     motor->pwm_output    = 0;
 
-    // Æô¶¯ PWM
+    // å¯åŠ¨ PWM
     HAL_TIM_PWM_Start(motor->htim, motor->Channel);
 
-    // Ê¹ÄÜµç»ú£¨Èç¹ûÓÐ EN Òý½Å£©
+    // ä½¿èƒ½ç”µæœºï¼ˆå¦‚æžœæœ‰ EN å¼•è„šï¼‰
     if (motor->EN_Port != NULL)
     {
         HAL_GPIO_WritePin(motor->EN_Port, motor->EN_Pin, GPIO_PIN_SET);
@@ -60,29 +60,29 @@ void Motor_Init(Motor_t *motor,
 }
 
 /**
- * @brief ÉèÖÃµç»úËÙ¶È
- * @param motor µç»ú½á¹¹Ìå
- * @param speed Ä¿±êËÙ¶È [-MaxSpeed, MaxSpeed]
+ * @brief è®¾ç½®ç”µæœºé€Ÿåº¦
+ * @param motor ç”µæœºç»“æž„ä½“
+ * @param speed ç›®æ ‡é€Ÿåº¦ [-MaxSpeed, MaxSpeed]
  */
 void Motor_SetSpeed(Motor_t *motor, int16_t speed)
 {
-    // ÏÞ·ù
+    // é™å¹…
     if (speed > motor->MaxSpeed) speed = motor->MaxSpeed;
     if (speed < -motor->MaxSpeed) speed = -motor->MaxSpeed;
 
-    // ¼«ÐÔ·´×ª
+    // æžæ€§åè½¬
     if (motor->Polarity) speed = -speed;
 
-    // ËÀÇø´¦Àí
+    // æ­»åŒºå¤„ç†
     if (speed > 0 && speed < motor->DeadZone) speed = motor->DeadZone;
     if (speed < 0 && speed > -motor->DeadZone) speed = -motor->DeadZone;
 
-    // ×ª»»Îª PWM Öµ
+    // è½¬æ¢ä¸º PWM å€¼
     uint16_t pwmVal = 0;
     if (motor->MaxSpeed != 0)
         pwmVal = (uint16_t)((abs(speed) * motor->MaxPWM) / motor->MaxSpeed);
 
-    // Êä³ö PWM ²¢ÉèÖÃ·½Ïò
+    // è¾“å‡º PWM å¹¶è®¾ç½®æ–¹å‘
     if (speed > 0)
     {
         HAL_GPIO_WritePin(motor->IN1_Port, motor->IN1_Pin, GPIO_PIN_SET);
@@ -101,21 +101,21 @@ void Motor_SetSpeed(Motor_t *motor, int16_t speed)
         pwmVal = 0;
     }
 
-    // ¸üÐÂ½á¹¹Ìå×´Ì¬
+    // æ›´æ–°ç»“æž„ä½“çŠ¶æ€
     motor->target_speed = speed;
     motor->pwm_output = pwmVal;
 }
 
 /**
- * @brief Í£Ö¹µç»ú
- * @param motor µç»ú½á¹¹Ìå
+ * @brief åœæ­¢ç”µæœº
+ * @param motor ç”µæœºç»“æž„ä½“
  */
 void Motor_Stop(Motor_t *motor)
 {
-    // Í£Ö¹ PWM Êä³ö
+    // åœæ­¢ PWM è¾“å‡º
     __HAL_TIM_SET_COMPARE(motor->htim, motor->Channel, 0);
 
-    // Ñ¡ÔñÍ£Ö¹Ä£Ê½
+    // é€‰æ‹©åœæ­¢æ¨¡å¼
     if (motor->StopMode == MOTOR_STOP_COAST)
     {
         HAL_GPIO_WritePin(motor->IN1_Port, motor->IN1_Pin, GPIO_PIN_RESET);
@@ -127,7 +127,7 @@ void Motor_Stop(Motor_t *motor)
         HAL_GPIO_WritePin(motor->IN2_Port, motor->IN2_Pin, GPIO_PIN_SET);
     }
 
-    // ¸üÐÂ×´Ì¬
+    // æ›´æ–°çŠ¶æ€
     motor->current_speed = 0;
     motor->target_speed  = 0;
     motor->pwm_output    = 0;

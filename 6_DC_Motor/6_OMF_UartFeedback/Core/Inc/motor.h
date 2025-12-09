@@ -9,44 +9,44 @@ extern "C" {
 #endif
 
 /**
- * @brief µç»úÍ£Ö¹Ä£Ê½
+ * @brief ç”µæœºåœæ­¢æ¨¡å¼
  */
 typedef enum {
-    MOTOR_STOP_COAST = 0,   // Ðü¿ÕÍ£Ö¹£¨Á½ÏàµÍµçÆ½£©
-    MOTOR_STOP_BRAKE        // ¿ìËÙÉ²³µ£¨Á½Ïà¸ßµçÆ½£©
+    MOTOR_STOP_COAST = 0,   // æ‚¬ç©ºåœæ­¢ï¼ˆä¸¤ç›¸ä½Žç”µå¹³ï¼‰
+    MOTOR_STOP_BRAKE        // å¿«é€Ÿåˆ¹è½¦ï¼ˆä¸¤ç›¸é«˜ç”µå¹³ï¼‰
 } MotorStopMode_t;
 
 /**
- * @brief µç»ú½á¹¹Ìå¶¨Òå
+ * @brief ç”µæœºç»“æž„ä½“å®šä¹‰
  */
 typedef struct {
-    // --- Ó²¼þÏà¹Ø ---
-    TIM_HandleTypeDef *htim;  // PWM ¶¨Ê±Æ÷
-    uint32_t Channel;         // PWM Í¨µÀ
-    GPIO_TypeDef *IN1_Port;   // IN1 Òý½Å¶Ë¿Ú
-    uint16_t IN1_Pin;         // IN1 Òý½Å
-    GPIO_TypeDef *IN2_Port;   // IN2 Òý½Å¶Ë¿Ú
-    uint16_t IN2_Pin;         // IN2 Òý½Å
-    GPIO_TypeDef *EN_Port;    // Ê¹ÄÜ¶Ë¿Ú£¨¿ÉÑ¡£¬Ã»ÓÐÔò NULL£©
-    uint16_t EN_Pin;          // Ê¹ÄÜÒý½Å
+    // --- ç¡¬ä»¶ç›¸å…³ ---
+    TIM_HandleTypeDef *htim;  // PWM å®šæ—¶å™¨
+    uint32_t Channel;         // PWM é€šé“
+    GPIO_TypeDef *IN1_Port;   // IN1 å¼•è„šç«¯å£
+    uint16_t IN1_Pin;         // IN1 å¼•è„š
+    GPIO_TypeDef *IN2_Port;   // IN2 å¼•è„šç«¯å£
+    uint16_t IN2_Pin;         // IN2 å¼•è„š
+    GPIO_TypeDef *EN_Port;    // ä½¿èƒ½ç«¯å£ï¼ˆå¯é€‰ï¼Œæ²¡æœ‰åˆ™ NULLï¼‰
+    uint16_t EN_Pin;          // ä½¿èƒ½å¼•è„š
 
-    // --- ²ÎÊýÅäÖÃ ---
-    uint16_t MaxPWM;          // ×î´ó PWM Öµ (CubeMX TIM ARR)
-    int16_t MaxSpeed;         // ×î´óËÙ¶È£¨ÓÃ»§Âß¼­·¶Î§£¬Àý ¡À1000£©
-    uint16_t DeadZone;        // ËÀÇøPWM£¨±ÜÃâÐ¡Öµµç»ú²»¶¯£©
-    uint8_t Polarity;         // ¼«ÐÔ(0=Ä¬ÈÏ,1=·´×ª)
-    MotorStopMode_t StopMode; // Í£Ö¹Ä£Ê½
+    // --- å‚æ•°é…ç½® ---
+    uint16_t MaxPWM;          // æœ€å¤§ PWM å€¼ (CubeMX TIM ARR)
+    int16_t MaxSpeed;         // æœ€å¤§é€Ÿåº¦ï¼ˆç”¨æˆ·é€»è¾‘èŒƒå›´ï¼Œä¾‹ Â±1000ï¼‰
+    uint16_t DeadZone;        // æ­»åŒºPWMï¼ˆé¿å…å°å€¼ç”µæœºä¸åŠ¨ï¼‰
+    uint8_t Polarity;         // æžæ€§(0=é»˜è®¤,1=åè½¬)
+    MotorStopMode_t StopMode; // åœæ­¢æ¨¡å¼
 
-    // --- ×´Ì¬Á¿ ---
-    int16_t current_speed;   // Êµ¼ÊËÙ¶È£¨±àÂëÆ÷·´À¡£©
-    int16_t target_speed;    // Ä¿±êËÙ¶È
-    int16_t pwm_output;      // µ±Ç° PWM Êä³öÖµ£¨ÐÂÔö£©
+    // --- çŠ¶æ€é‡ ---
+    int16_t current_speed;   // å®žé™…é€Ÿåº¦ï¼ˆç¼–ç å™¨åé¦ˆï¼‰
+    int16_t target_speed;    // ç›®æ ‡é€Ÿåº¦
+    int16_t pwm_output;      // å½“å‰ PWM è¾“å‡ºå€¼ï¼ˆæ–°å¢žï¼‰
 } Motor_t;
 
-// ================= API º¯ÊýÉùÃ÷ =================
+// ================= API å‡½æ•°å£°æ˜Ž =================
 
 /**
- * @brief ³õÊ¼»¯µç»ú
+ * @brief åˆå§‹åŒ–ç”µæœº
  */
 void Motor_Init(Motor_t *motor, TIM_HandleTypeDef *htim, uint32_t Channel,
                 GPIO_TypeDef *IN1_Port, uint16_t IN1_Pin,
@@ -56,18 +56,18 @@ void Motor_Init(Motor_t *motor, TIM_HandleTypeDef *htim, uint32_t Channel,
                 uint8_t Polarity, MotorStopMode_t StopMode);
 
 /**
- * @brief ÉèÖÃµç»úËÙ¶È£¨¿ª»·PWM¿ØÖÆ£©
- * @param speed - ·¶Î§£º[-MaxSpeed, MaxSpeed]
+ * @brief è®¾ç½®ç”µæœºé€Ÿåº¦ï¼ˆå¼€çŽ¯PWMæŽ§åˆ¶ï¼‰
+ * @param speed - èŒƒå›´ï¼š[-MaxSpeed, MaxSpeed]
  */
 void Motor_SetSpeed(Motor_t *motor, int16_t speed);
 
 /**
- * @brief µç»úÍ£Ö¹£¨¸ù¾ÝStopModeÑ¡ÔñÐü¿Õ/É²³µ£©
+ * @brief ç”µæœºåœæ­¢ï¼ˆæ ¹æ®StopModeé€‰æ‹©æ‚¬ç©º/åˆ¹è½¦ï¼‰
  */
 void Motor_Stop(Motor_t *motor);
 
 /**
- * @brief µç»ú½ô¼±ÖÆ¶¯£¨¿ÉÑ¡À©Õ¹½Ó¿Ú£©
+ * @brief ç”µæœºç´§æ€¥åˆ¶åŠ¨ï¼ˆå¯é€‰æ‰©å±•æŽ¥å£ï¼‰
  */
 static inline void Motor_EmergencyStop(Motor_t *motor) {
     HAL_TIM_PWM_Stop(motor->htim, motor->Channel);
