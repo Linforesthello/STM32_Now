@@ -30,6 +30,8 @@
 #include "motor.h"
 #include "command.h"
 
+  // 项目等待重构与解耦合
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
