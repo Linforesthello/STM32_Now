@@ -5,16 +5,16 @@
 #include "cmsis_os.h"
 #include "command.h"
 
-// ´®¿Ú½ÓÊÕ»º³åÇø³¤¶È
+// ä¸²å£æ¥æ”¶ç¼“å†²åŒºé•¿åº¦
 #define UART2_RX_BUF_LEN 32
 
-// ´®¿Ú³õÊ¼»¯º¯Êı
+// ä¸²å£åˆå§‹åŒ–å‡½æ•°
 void UART_App_Init(void);
 
-// ´®¿Ú·¢ËÍº¯Êı
+// ä¸²å£å‘é€å‡½æ•°
 void UART2_Print(const char *msg);
 
-// ´®¿Ú½ÓÊÕÖĞ¶Ï»Øµ÷
+// ä¸²å£æ¥æ”¶ä¸­æ–­å›è°ƒ
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
 
 #endif

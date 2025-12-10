@@ -39,7 +39,7 @@ typedef struct {
 
 //=================== 外部变量 ===================//
 extern Motor_t motor1;
-extern volatile uint8_t motor_enable_flag;
+// extern volatile uint8_t motor_enable_flag;       //20251210改动，未验证
 extern osMessageQueueId_t CommandQueueHandle;
 
 //=================== 函数声明 ===================//
