@@ -115,7 +115,7 @@ int main(void)
            GPIOB, GPIO_PIN_0,
            GPIOB, GPIO_PIN_1,
            GPIOB, GPIO_PIN_10,              // EN (如果没有独立的使能引脚，则为 NULL, 0)
-           1000, 1000, 50,
+           1000, 1000, 5,
            0, MOTOR_STOP_BRAKE);
 
   /* USER CODE END 2 */
