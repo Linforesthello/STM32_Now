@@ -111,11 +111,17 @@ int main(void)
   // 启动编码器计数
   HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
 
+
+  // 死区正常工作；且当前配置下，最大速度/最大pwm最好为1000
+  // 实验发现，最大速度在小于1000时，难以与cubemx中的"72-1""1000-1"相对应；
+  // 且当cubemx的arr改为600，900等时，超限（超过某一代表数值即满额速度运行）明显呈现跟随
+
+  // EN (如果没有独立的使能引脚，则为 NULL, 0)
     Motor_Init(&motor1, &htim3, TIM_CHANNEL_1,
            GPIOB, GPIO_PIN_0,
            GPIOB, GPIO_PIN_1,
-           GPIOB, GPIO_PIN_10,              // EN (如果没有独立的使能引脚，则为 NULL, 0)
-           1000, 1000, 5,
+           GPIOB, GPIO_PIN_10,              
+           1000, 1000, 100,                 
            0, MOTOR_STOP_BRAKE);
 
   /* USER CODE END 2 */

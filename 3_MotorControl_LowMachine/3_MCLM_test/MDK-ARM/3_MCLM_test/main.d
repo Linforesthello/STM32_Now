@@ -44,6 +44,6 @@
 3_mclm_test\main.o: ../Core/Inc/usart.h
 3_mclm_test\main.o: ../Core/Inc/gpio.h
 3_mclm_test\main.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
-3_mclm_test\main.o: ../Core/Inc/motor.h
+3_mclm_test\main.o: ../Core/Inc/tb6612_DC.h
 3_mclm_test\main.o: ../Core/Inc/command.h
 3_mclm_test\main.o: ../Core/Inc/logger.h

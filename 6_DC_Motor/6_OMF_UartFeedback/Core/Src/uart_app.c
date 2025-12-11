@@ -9,7 +9,7 @@ static uint8_t uart2_rx_index = 0;
 static uint8_t uart2_rx_data;
 
 // 串口发送缓冲区
-static uint8_t uart2_tx_buf[64];
+// static uint8_t uart2_tx_buf[64];
 static volatile uint8_t uart2_tx_busy = 0;
 
 // 串口初始化函数
@@ -20,16 +20,16 @@ void UART_App_Init(void)
 }
 
 // 串口发送函数
-void UART2_Print(const char *msg)
-{
-    if (uart2_tx_busy) return; // 若上次发送未完成则丢弃（简化处理）
-    uint16_t len = strlen(msg);
-    if (len > 64) len = 64;
+// void UART2_Print(const char *msg)
+// {
+//     if (uart2_tx_busy) return; // 若上次发送未完成则丢弃（简化处理）
+//     uint16_t len = strlen(msg);
+//     if (len > 64) len = 64;
 
-    memcpy(uart2_tx_buf, msg, len);
-    uart2_tx_busy = 1;
-    HAL_UART_Transmit_IT(&huart2, uart2_tx_buf, len);
-}
+//     memcpy(uart2_tx_buf, msg, len);
+//     uart2_tx_busy = 1;
+//     HAL_UART_Transmit_IT(&huart2, uart2_tx_buf, len);
+// }
 
 // 串口接收中断回调
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)

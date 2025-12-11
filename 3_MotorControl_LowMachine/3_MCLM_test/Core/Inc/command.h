@@ -19,7 +19,7 @@
 
 #include "main.h"
 #include "cmsis_os.h"
-#include "motor.h"
+#include "tb6612_DC.h"
 #include "stdint.h"
 
 //=================== 命令类型定义 ===================//
@@ -38,7 +38,7 @@ typedef struct {
 } CommandMsg_t;
 
 //=================== 外部变量 ===================//
-extern Motor_t motor1;
+// extern Motor_t motor1;
 // extern volatile uint8_t motor_enable_flag;       //20251210改动，未验证
 extern osMessageQueueId_t CommandQueueHandle;
 

@@ -1,0 +1,15 @@
+3_mclm_test\command_task.o: ..\Core\Src\command_task.c
+3_mclm_test\command_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
+3_mclm_test\command_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+3_mclm_test\command_task.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
+3_mclm_test\command_task.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+3_mclm_test\command_task.o: ../Core/Inc/FreeRTOSConfig.h
+3_mclm_test\command_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+3_mclm_test\command_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+3_mclm_test\command_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+3_mclm_test\command_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+3_mclm_test\command_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+3_mclm_test\command_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+3_mclm_test\command_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+3_mclm_test\command_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+3_mclm_test\command_task.o: ../Core/Inc/app_task.h

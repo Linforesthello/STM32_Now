@@ -28,7 +28,7 @@
 /* USER CODE BEGIN Includes */
 
 #include "string.h"   // 引入字符串处理库
-#include "motor.h"    // 引入电机控制模块
+#include "tb6612_DC.h"    // 引入电机控制模块
 #include "command.h"  // 引入命令解析模块
 #include "logger.h" // 引入 UART 应用层模块
 

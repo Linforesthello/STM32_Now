@@ -196,7 +196,7 @@ void Start_MotorControl(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    MotorControl_Task();  // 从原来300行变成1行
+    // MotorControl_Task();  // 从原来300行变成1行
     osDelay(10);
   }
   /* USER CODE END Start_MotorControl */
@@ -215,7 +215,7 @@ void Start_Encoder(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    Encoder_Task();       // 专门速度更新和标志位设置
+    // Encoder_Task();       // 专门速度更新和标志位设置
     osDelay(10);
   }
   /* USER CODE END Start_Encoder */
@@ -234,7 +234,7 @@ void Start_Logger(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    Logger_Task();        // 串口发送和格式化
+    // Logger_Task();        // 串口发送和格式化
     // osDelay(1);
   }
   /* USER CODE END Start_Logger */
@@ -271,7 +271,7 @@ void Start_Heartbeat(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    Heartbeat_Task();     // LED闪烁
+    // Heartbeat_Task();     // LED闪烁
     osDelay(200);
   }
   /* USER CODE END Start_Heartbeat */
