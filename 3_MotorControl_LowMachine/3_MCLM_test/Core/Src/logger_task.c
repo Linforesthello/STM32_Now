@@ -3,7 +3,6 @@
 #include "app_includes.h"
 
 
-
 void Logger_Task(void *argument)
 {
   /* USER CODE BEGIN Start_SerialLog */
@@ -46,13 +45,13 @@ void Logger_Task(void *argument)
 }
 
 
+#include "cmsis_os.h"
+#include "app_task.h"
+#include "logger.h"
+#include "string.h"
 // #include "cmsis_os.h"
-// #include "app_task.h"
-// #include "logger.h"
-// #include "string.h"
-// // #include "cmsis_os.h"
-// #include "tb6612_DC.h"
-// // #include "task.h"
-// #include "command.h"
-// #include "tim.h"   // ← 必须加
-// #include "app_task.h"
+#include "tb6612_DC.h"
+// #include "task.h"
+#include "command.h"
+#include "tim.h"   // ← 必须加
+#include "app_task.h"

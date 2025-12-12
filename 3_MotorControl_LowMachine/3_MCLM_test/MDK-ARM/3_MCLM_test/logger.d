@@ -40,7 +40,8 @@
 3_mclm_test\logger.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 3_mclm_test\logger.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 3_mclm_test\logger.o: ../Core/Inc/command.h
-3_mclm_test\logger.o: ../Core/Inc/main.h
-3_mclm_test\logger.o: ../Core/Inc/tb6612_DC.h
 3_mclm_test\logger.o: ../Core/Inc/usart.h
+3_mclm_test\logger.o: ../Core/Inc/main.h
 3_mclm_test\logger.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
+3_mclm_test\logger.o: ../Core/Inc/app_task.h
+3_mclm_test\logger.o: ../Core/Inc/tb6612_DC.h

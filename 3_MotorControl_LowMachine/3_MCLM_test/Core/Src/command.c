@@ -5,8 +5,8 @@
 #include "stdio.h"
 
 //20251210,为什么这里加入了死定义？明明motor.h结构体内定义了Maxspeed
-#define MAX_SPEED 1000
-#define MIN_SPEED -1000
+// #define MAX_SPEED 1000
+// #define MIN_SPEED -1000
 // 涉及到竟态，解耦合概念
 
 //=================== 新版：字符串命令解析 ===================//
@@ -15,6 +15,8 @@
 // "F"    → CMD_FORWARD
 // "R"    → CMD_REVERSE
 // "X"    → CMD_STOP
+
+
 CommandMsg_t Command_ParseString(const char *cmdStr)
 {
     CommandMsg_t msg = {CMD_NONE, 0};
@@ -22,31 +24,40 @@ CommandMsg_t Command_ParseString(const char *cmdStr)
     if (cmdStr == NULL || cmdStr[0] == '\0')
         return msg;
 
-    // 格式 1: S500 → 设置速度
-    if (cmdStr[0] == 'S' || cmdStr[0] == 's') {
-        msg.type = CMD_SET_SPEED;
-        msg.value = atoi(&cmdStr[1]);  // 提取数值
+    char c = cmdStr[0];
 
-        // motor.c中"SetSpeed"已经包含了限幅，这里重复了
-        // if (msg.value > MAX_SPEED) msg.value = MAX_SPEED;
-        // if (msg.value < -MAX_SPEED) msg.value = -MAX_SPEED;
-        // msg.value = atoi(&cmdStr[1]);
+    // 统一大写
+    if (c >= 'a' && c <= 'z')
+        c -= 32;
 
-    }
-    // 格式 2: F → Forward
-    else if (cmdStr[0] == 'F' || cmdStr[0] == 'f') 
+    switch (c)
     {
-        msg.type = CMD_FORWARD;
-    }
-    // 格式 3: R → Reverse
-    else if (cmdStr[0] == 'R' || cmdStr[0] == 'r') 
-    {
-        msg.type = CMD_REVERSE;
-    }
-    // 格式 4: X → Stop
-    else if (cmdStr[0] == 'X' || cmdStr[0] == 'x') 
-    {
-        msg.type = CMD_STOP;
+        case 'S':   // Sxxx → 设定速度
+        {
+            const char *numPart = &cmdStr[1];
+            if (*numPart == '\0')
+                return msg;  // 没数字 → 视为无效
+
+            msg.type  = CMD_SET_SPEED;
+            msg.value = atoi(numPart);
+            break;
+        }
+
+        case 'F':
+            msg.type = CMD_FORWARD;
+            break;
+
+        case 'R':
+            msg.type = CMD_REVERSE;
+            break;
+
+        case 'X':
+            msg.type = CMD_STOP;
+            break;
+
+        default:
+            // 未知命令 → 保持 CMD_NONE
+            break;
     }
 
     return msg;
@@ -54,22 +65,6 @@ CommandMsg_t Command_ParseString(const char *cmdStr)
 
 
 
-// #include "command.h"
-// #include "usart.h"
-// #include "string.h"
-// #include "stdlib.h"
-// #include "stdio.h"
-
-// //20251210,为什么这里加入了死定义？明明motor.h结构体内定义了Maxspeed
-// // #define MAX_SPEED 1000
-// // #define MIN_SPEED -1000
-
-// //=================== 新版：字符串命令解析 ===================//
-// // 例如：
-// // "S500" → CMD_SET_SPEED, value=500
-// // "F"    → CMD_FORWARD
-// // "R"    → CMD_REVERSE
-// // "X"    → CMD_STOP
 // CommandMsg_t Command_ParseString(const char *cmdStr)
 // {
 //     CommandMsg_t msg = {CMD_NONE, 0};
@@ -82,20 +77,25 @@ CommandMsg_t Command_ParseString(const char *cmdStr)
 //         msg.type = CMD_SET_SPEED;
 //         msg.value = atoi(&cmdStr[1]);  // 提取数值
 
-//         if (msg.value > motor1.MaxSpeed) msg.value = motor1.MaxSpeed;
-//         if (msg.value < -motor1.MaxSpeed) msg.value = -motor1.MaxSpeed;
+//         // motor.c中"SetSpeed"已经包含了限幅，这里重复了
+//         // if (msg.value > MAX_SPEED) msg.value = MAX_SPEED;
+//         // if (msg.value < -MAX_SPEED) msg.value = -MAX_SPEED;
+//         // msg.value = atoi(&cmdStr[1]);
 
 //     }
 //     // 格式 2: F → Forward
-//     else if (cmdStr[0] == 'F' || cmdStr[0] == 'f') {
+//     else if (cmdStr[0] == 'F' || cmdStr[0] == 'f') 
+//     {
 //         msg.type = CMD_FORWARD;
 //     }
 //     // 格式 3: R → Reverse
-//     else if (cmdStr[0] == 'R' || cmdStr[0] == 'r') {
+//     else if (cmdStr[0] == 'R' || cmdStr[0] == 'r') 
+//     {
 //         msg.type = CMD_REVERSE;
 //     }
 //     // 格式 4: X → Stop
-//     else if (cmdStr[0] == 'X' || cmdStr[0] == 'x') {
+//     else if (cmdStr[0] == 'X' || cmdStr[0] == 'x') 
+//     {
 //         msg.type = CMD_STOP;
 //     }
 

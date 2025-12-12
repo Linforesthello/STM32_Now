@@ -1,5 +1,7 @@
 3_mclm_test\command.o: ..\Core\Src\command.c
 3_mclm_test\command.o: ../Core/Inc/command.h
+3_mclm_test\command.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+3_mclm_test\command.o: ../Core/Inc/usart.h
 3_mclm_test\command.o: ../Core/Inc/main.h
 3_mclm_test\command.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 3_mclm_test\command.o: ../Core/Inc/stm32f1xx_hal_conf.h
@@ -8,7 +10,6 @@
 3_mclm_test\command.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 3_mclm_test\command.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 3_mclm_test\command.o: ../Drivers/CMSIS/Include/core_cm3.h
-3_mclm_test\command.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
 3_mclm_test\command.o: ../Drivers/CMSIS/Include/cmsis_version.h
 3_mclm_test\command.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 3_mclm_test\command.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -29,19 +30,6 @@
 3_mclm_test\command.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 3_mclm_test\command.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 3_mclm_test\command.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-3_mclm_test\command.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
-3_mclm_test\command.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-3_mclm_test\command.o: ../Core/Inc/FreeRTOSConfig.h
-3_mclm_test\command.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
-3_mclm_test\command.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
-3_mclm_test\command.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
-3_mclm_test\command.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
-3_mclm_test\command.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-3_mclm_test\command.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
-3_mclm_test\command.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
-3_mclm_test\command.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
-3_mclm_test\command.o: ../Core/Inc/tb6612_DC.h
-3_mclm_test\command.o: ../Core/Inc/usart.h
 3_mclm_test\command.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
 3_mclm_test\command.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
 3_mclm_test\command.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
