@@ -26,6 +26,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "app_task.h"
+
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -194,11 +197,12 @@ void Start_MotorControl(void *argument)
 {
   /* USER CODE BEGIN Start_MotorControl */
   /* Infinite loop */
-  for(;;)
-  {
-    // MotorControl_Task();  // 从原来300行变成1行
-    osDelay(10);
-  }
+  MotorControl_Task(argument);
+  // for(;;)
+  // {
+  //   // MotorControl_Task();  // 从原来300行变成1行
+  //   osDelay(10);
+  // }
   /* USER CODE END Start_MotorControl */
 }
 
@@ -213,11 +217,12 @@ void Start_Encoder(void *argument)
 {
   /* USER CODE BEGIN Start_Encoder */
   /* Infinite loop */
-  for(;;)
-  {
-    // Encoder_Task();       // 专门速度更新和标志位设置
-    osDelay(10);
-  }
+  Encoder_Task(argument);
+  // for(;;)
+  // {
+  //   // Encoder_Task();       // 专门速度更新和标志位设置
+  //   osDelay(10);
+  // }
   /* USER CODE END Start_Encoder */
 }
 
@@ -232,11 +237,12 @@ void Start_Logger(void *argument)
 {
   /* USER CODE BEGIN Start_Logger */
   /* Infinite loop */
-  for(;;)
-  {
-    // Logger_Task();        // 串口发送和格式化
-    // osDelay(1);
-  }
+  Logger_Task(argument);
+  // for(;;)
+  // {
+  //   // Logger_Task();        // 串口发送和格式化
+  //   osDelay(1);
+  // }
   /* USER CODE END Start_Logger */
 }
 
@@ -251,6 +257,7 @@ void Start_Command(void *argument)
 {
   /* USER CODE BEGIN Start_Command */
   /* Infinite loop */
+  // Command_Task(argument);
   for(;;)
   {
     osDelay(1);
@@ -269,11 +276,11 @@ void Start_Heartbeat(void *argument)
 {
   /* USER CODE BEGIN Start_Heartbeat */
   /* Infinite loop */
-  for(;;)
-  {
-    // Heartbeat_Task();     // LED闪烁
-    osDelay(200);
-  }
+  // (void)argument; // 明确忽略
+  // Heartbeat_Task();   // 不再传 argument
+
+  Heartbeat_Task(argument);
+
   /* USER CODE END Start_Heartbeat */
 }
 

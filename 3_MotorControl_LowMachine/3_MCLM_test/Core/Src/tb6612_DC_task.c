@@ -1,7 +1,6 @@
-#include "cmsis_os.h"
-#include "tb6612_DC.h"
-#include "command.h"
-#include "app_task.h"
+
+
+#include "app_includes.h"
 
 
 void MotorControl_Task(void *argument)
@@ -11,7 +10,16 @@ void MotorControl_Task(void *argument)
   // uint8_t cmd;
   CommandMsg_t cmdMsg;
 
+  // main.c迁移
+    Motor_Init(&motor1, &htim3, TIM_CHANNEL_1,
+              GPIOB, GPIO_PIN_0,
+              GPIOB, GPIO_PIN_1,
+              GPIOB, GPIO_PIN_10,              // EN (如果没有独立的使能引脚，则为 NULL, 0)
+              1000, 1000, 5,
+              0, MOTOR_STOP_BRAKE);
+
   /* Infinite loop */
+
   for(;;)
   {
     if (osMessageQueueGet(CommandQueueHandle, &cmdMsg, NULL, osWaitForever) == osOK)
@@ -44,3 +52,8 @@ void MotorControl_Task(void *argument)
   }
   /* USER CODE END Start_MotorControl */
 }
+
+// #include "cmsis_os.h"
+// #include "tb6612_DC.h"
+// #include "command.h"
+// #include "app_task.h"

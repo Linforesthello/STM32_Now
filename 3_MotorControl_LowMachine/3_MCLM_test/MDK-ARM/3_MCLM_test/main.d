@@ -43,7 +43,13 @@
 3_mclm_test\main.o: ../Core/Inc/tim.h
 3_mclm_test\main.o: ../Core/Inc/usart.h
 3_mclm_test\main.o: ../Core/Inc/gpio.h
-3_mclm_test\main.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
+3_mclm_test\main.o: ../Core/Inc/app_includes.h
+3_mclm_test\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+3_mclm_test\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 3_mclm_test\main.o: ../Core/Inc/tb6612_DC.h
 3_mclm_test\main.o: ../Core/Inc/command.h
 3_mclm_test\main.o: ../Core/Inc/logger.h
+3_mclm_test\main.o: ../Core/Inc/app_task.h
+3_mclm_test\main.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
+3_mclm_test\main.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
+3_mclm_test\main.o: C:\keil5\MDK-ARM\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdbool.h

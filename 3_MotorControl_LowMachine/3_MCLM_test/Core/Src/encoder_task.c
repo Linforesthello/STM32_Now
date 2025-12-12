@@ -1,15 +1,16 @@
-#include "cmsis_os.h"
-#include "tb6612_DC.h"
-// #include "task.h"
-#include "command.h"
-#include "tim.h"   // ← 必须加
-#include "app_task.h"
 
 
-void Start_SpeedMeasure(void *argument)
+#include "app_includes.h"
+
+
+void Encoder_Task(void *argument)
 {
   /* USER CODE BEGIN Start_SpeedMeasure */
   /* Infinite loop */
+
+  // main.c迁移
+  HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
+
   for(;;)
   {
     static int16_t last_cnt = 0; 
@@ -48,3 +49,11 @@ void Start_SpeedMeasure(void *argument)
   }
   /* USER CODE END Start_SpeedMeasure */
 }
+
+
+// #include "cmsis_os.h"
+// #include "tb6612_DC.h"
+// // #include "task.h"
+// #include "command.h"
+// #include "tim.h"   // ← 必须加
+// #include "app_task.h"

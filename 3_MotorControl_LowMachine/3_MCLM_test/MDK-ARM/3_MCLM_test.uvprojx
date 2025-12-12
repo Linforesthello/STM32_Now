@@ -395,16 +395,6 @@
           <GroupName>Application/User/Core</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Core/Src/main.c</FilePath>
-            </File>
-            <File>
-              <FileName>freertos.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Core/Src/freertos.c</FilePath>
-            </File>
-            <File>
               <FileName>logger.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\logger.c</FilePath>
@@ -430,9 +420,64 @@
               <FilePath>..\Core\Src\tb6612_DC.c</FilePath>
             </File>
             <File>
+              <FileName>command_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\command_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>encoder_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\encoder_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>logger_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\logger_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>BLDC_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\BLDC_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>tb6612_DC_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\tb6612_DC_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>heartbeat_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\heartbeat_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_task.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\app_task.h</FilePath>
+            </File>
+            <File>
+              <FileName>app_includes.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\app_includes.h</FilePath>
+            </File>
+            <File>
+              <FileName>app_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\app_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/main.c</FilePath>
+            </File>
+            <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>freertos.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/freertos.c</FilePath>
             </File>
             <File>
               <FileName>dma.c</FileName>
@@ -463,36 +508,6 @@
               <FileName>stm32f1xx_hal_timebase_tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32f1xx_hal_timebase_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>command_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\command_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>encoder_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\encoder_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>logger_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\logger_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>BLDC_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\BLDC_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>tb6612_DC_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\tb6612_DC_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_task.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Core\Inc\app_task.h</FilePath>
             </File>
           </Files>
         </Group>

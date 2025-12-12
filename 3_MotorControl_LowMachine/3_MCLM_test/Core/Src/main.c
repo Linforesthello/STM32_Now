@@ -27,10 +27,16 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "string.h"   // 引入字符串处理库
-#include "tb6612_DC.h"    // 引入电机控制模块
-#include "command.h"  // 引入命令解析模块
-#include "logger.h" // 引入 UART 应用层模块
+#include "app_includes.h"    // 统一应用层头文件
+
+// "app_task.h"已经包含在"app_includes.h"
+// #include "app_task.h"
+
+
+// #include "string.h"   // 引入字符串处理库
+// #include "tb6612_DC.h"    // 引入电机控制模块
+// #include "command.h"  // 引入命令解析模块
+// #include "logger.h" // 引入 UART 应用层模块
 
 /* USER CODE END Includes */
 
@@ -53,7 +59,7 @@
 
 /* USER CODE BEGIN PV */
 
-Motor_t motor1; // 声明全局电机实例
+// Motor_t motor1; // 声明全局电机实例
 
 /* USER CODE END PV */
 
@@ -105,17 +111,19 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  UART_App_Init();
+  // 已经完成迁移20251212
 
-  // 启动编码器计数
-  HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
+  // UART_App_Init();
 
-  Motor_Init(&motor1, &htim3, TIM_CHANNEL_1,
-              GPIOB, GPIO_PIN_0,
-              GPIOB, GPIO_PIN_1,
-              GPIOB, GPIO_PIN_10,              // EN (如果没有独立的使能引脚，则为 NULL, 0)
-              1000, 1000, 5,
-              0, MOTOR_STOP_BRAKE);
+  // // 启动编码器计数
+  // HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
+
+  // Motor_Init(&motor1, &htim3, TIM_CHANNEL_1,
+  //             GPIOB, GPIO_PIN_0,
+  //             GPIOB, GPIO_PIN_1,
+  //             GPIOB, GPIO_PIN_10,              // EN (如果没有独立的使能引脚，则为 NULL, 0)
+  //             1000, 1000, 5,
+  //             0, MOTOR_STOP_BRAKE);
 
   /* USER CODE END 2 */
 

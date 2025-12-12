@@ -1,17 +1,41 @@
 #ifndef __APP_TASKS_H__
 #define __APP_TASKS_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* ===================== FreeRTOS ===================== */
 #include "cmsis_os.h"
 
-// ========== Task Handles ==========
+/* ===================== Drivers ===================== */
+#include "tb6612_DC.h"
+
+/* ===================== Task Handles ===================== */
 extern osThreadId_t MotorControl_TaHandle;
 extern osThreadId_t Encoder_TaHandle;
 extern osThreadId_t Logger_TaHandle;
 extern osThreadId_t Command_TaHandle;
 extern osThreadId_t Heartbeat_TaHandle;
 
-// ========== Queues ==========
+/* ===================== Queues ===================== */
 extern osMessageQueueId_t CommandQueueHandle;
+
+/* ===================== Global Objects（不冲突） ===================== */
+extern Motor_t motor1;
+extern uint8_t tx_buf[64];
+
+/* ===================== Task Body Prototypes（你缺的关键部分） ===================== */
+/* 这些函数就是你在各个 .c 文件中真正写逻辑的函数 */
+void MotorControl_Task(void *argument);
+void Encoder_Task(void *argument);
+void Logger_Task(void *argument);
+void Command_Task(void *argument);
+void Heartbeat_Task(void *argument);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 
@@ -20,26 +44,31 @@ extern osMessageQueueId_t CommandQueueHandle;
 // #ifndef __APP_TASKS_H__
 // #define __APP_TASKS_H__
 
-// #include "cmsis_os2.h"
-
-// extern osThreadId_t MotorControlTasHandle;
-// extern osThreadId_t HeartbeatTaskHandle;
-// extern osThreadId_t SpeedMeasureTasHandle;
-// extern osThreadId_t SerialLogTaskHandle;
-
-// extern osMessageQueueId_t CommandQueueHandle;
-
+// #ifdef __cplusplus
+// extern "C" {
 // #endif
 
+// #include "cmsis_os.h"
+// #include "tb6612_DC.h"
 
+// // ========== Task Handles ==========
+// extern osThreadId_t MotorControl_TaHandle;
+// extern osThreadId_t Encoder_TaHandle;
+// extern osThreadId_t Logger_TaHandle;
+// extern osThreadId_t Command_TaHandle;
+// extern osThreadId_t Heartbeat_TaHandle;
 
-// // #ifndef __APP_TASKS_H__
-// // #define __APP_TASKS_H__
+// // ========== Queue ==========
+// extern osMessageQueueId_t CommandQueueHandle;
 
-// // #include "cmsis_os2.h"
+// // ========== Global Objects ==========
+// extern Motor_t motor1;
 
-// // extern osThreadId_t SerialLogTaskHandle;
-// // extern osThreadId_t SpeedMeasureTaskHandle;
-// // extern osThreadId_t MotorControlTaskHandle;
+// // ========== logger buffer ==========
+// extern uint8_t tx_buf[64];
 
-// // #endif
+// #ifdef __cplusplus
+// }
+// #endif
+
+// #endif

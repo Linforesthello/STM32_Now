@@ -39,3 +39,5 @@
 3_mclm_test\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 3_mclm_test\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 3_mclm_test\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+3_mclm_test\freertos.o: ../Core/Inc/app_task.h
+3_mclm_test\freertos.o: ../Core/Inc/tb6612_DC.h
